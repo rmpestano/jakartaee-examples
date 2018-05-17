@@ -10,27 +10,42 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.samples.jsf.requestscoped;
+package jakartaee.samples.jsf.sessionscoped;
 
+import java.io.Serializable;
 import java.util.Date;
+import javax.annotation.PostConstruct;
 import javax.inject.Named;
-import javax.enterprise.context.RequestScoped;
+import javax.enterprise.context.SessionScoped;
 
 /**
- * A request scoped bean.
+ * A session scoped bean.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */
-@Named(value = "requestScopedBean")
-@RequestScoped
-public class RequestScopedBean {
+@Named(value = "sessionScopedBean")
+@SessionScoped
+public class SessionScopedBean implements Serializable {
+    
+    /**
+     * Stores the time.
+     */
+    private String time;
 
+    /**
+     * Initialize the bean.
+     */
+    @PostConstruct
+    public void initialize() {
+        time = new Date().toString() + " - " + System.nanoTime();
+    }
+    
     /**
      * Get the time.
      * 
      * @return the time.
      */
     public String getTime() {
-        return new Date().toString() + " - " + System.nanoTime();
+        return time;
     }
 }

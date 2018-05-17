@@ -12,8 +12,9 @@
     <groupId>jakartaee.samples.jsf</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Jakarta EE - JSF Examples Project</name>
+    <name>Jakarta EE - JSF - Examples</name>
     <modules>
         <module>requestScoped</module>
+        <module>sessionScoped</module>
     </modules>
 </project>
