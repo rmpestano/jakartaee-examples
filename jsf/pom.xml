@@ -9,7 +9,11 @@
         <artifactId>project</artifactId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>jsf</artifactId>
+    <groupId>jakartaee.samples.jsf</groupId>
+    <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Jakarta EE JSF Samples Project</name>
+    <name>Jakarta EE - JSF Examples Project</name>
+    <modules>
+        <module>requestScoped</module>
+    </modules>
 </project>

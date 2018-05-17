@@ -8,7 +8,28 @@
     <artifactId>project</artifactId>
     <version>8-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Jakarta EE Samples Project</name>
+    <name>Jakarta EE - Examples Project</name>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.1</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-web-api</artifactId>
+                <version>8.0</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <modules>
         <module>jsf</module>
     </modules>
