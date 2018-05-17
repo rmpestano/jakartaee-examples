@@ -9,6 +9,9 @@
     <version>8-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Jakarta EE Samples Project</name>
+    <modules>
+        <module>jsf</module>
+    </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
