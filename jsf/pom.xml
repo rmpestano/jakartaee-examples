@@ -14,6 +14,7 @@
     <packaging>pom</packaging>
     <name>Jakarta EE - JSF - Examples</name>
     <modules>
+        <module>applicationScoped</module>
         <module>requestScoped</module>
         <module>sessionScoped</module>
     </modules>
