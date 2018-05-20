@@ -15,6 +15,7 @@
     <name>Jakarta EE - JSF - Examples</name>
     <modules>
         <module>applicationScoped</module>
+        <module>facesContext</module>
         <module>requestScoped</module>
         <module>sessionScoped</module>
         <module>viewScoped</module>
