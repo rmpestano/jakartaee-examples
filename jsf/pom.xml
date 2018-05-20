@@ -17,5 +17,6 @@
         <module>applicationScoped</module>
         <module>requestScoped</module>
         <module>sessionScoped</module>
+        <module>viewScoped</module>
     </modules>
 </project>
