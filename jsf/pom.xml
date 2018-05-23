@@ -17,6 +17,7 @@
         <module>applicationScoped</module>
         <module>externalContext</module>
         <module>facesContext</module>
+        <module>managedProperty</module>
         <module>requestScoped</module>
         <module>sessionScoped</module>
         <module>viewScoped</module>
