@@ -9,9 +9,9 @@
         <groupId>jakartaee.examples.jsf</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>sessionScoped</artifactId>
+    <artifactId>requestCookieMap</artifactId>
     <packaging>war</packaging>
-    <name>Jakarta EE - JSF - SessionScoped example</name>
+    <name>Jakarta EE - JSF - An injected RequestCookieMap example</name>
     <dependencies>
         <dependency>
             <groupId>javax</groupId>

@@ -10,7 +10,7 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.samples.jsf.applicationMap;
+package jakartaee.examples.jsf.applicationMap;
 
 import java.io.Serializable;
 import java.util.Map;
@@ -21,7 +21,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 /**
- * A request scoped bean injecting the ApplicatiobMap.
+ * A request scoped bean injecting the application map.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */
@@ -31,18 +31,18 @@ import javax.inject.Named;
 public class ApplicationMapBean implements Serializable {
     
     /**
-     * Stores the ExternalContext.
+     * Stores the application map.
      */
     @Inject
     @ApplicationMap
     private Map<String, Object> applicationMap;
     
     /**
-     * Get the ExternalContext.
+     * Get the application map.
      * 
-     * @return the ExternalContext.
+     * @return the application map.
      */
-    public Map getApplicationMap() {
+    public Map<String, Object> getApplicationMap() {
         return applicationMap;
     }
 }
