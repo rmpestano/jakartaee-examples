@@ -18,6 +18,7 @@
         <module>applicationScoped</module>
         <module>externalContext</module>
         <module>facesContext</module>
+        <module>initParameterMap</module>
         <module>managedProperty</module>
         <module>requestCookieMap</module>
         <module>requestScoped</module>
