@@ -10,68 +10,51 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.samples.jsf.viewScoped;
+package jakartaee.samples.jsf.inputFile;
 
-import java.io.Serializable;
 import java.util.Date;
-import javax.annotation.PostConstruct;
-import javax.faces.view.ViewScoped;
 import javax.inject.Named;
+import javax.enterprise.context.RequestScoped;
+import javax.servlet.http.Part;
 
 /**
- * A view scoped bean.
+ * A request scoped bean for using with the h:inputFile example.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */
-@Named(value = "viewScopedBean")
-@ViewScoped
-public class ViewScopedBean implements Serializable {
+@Named(value = "inputFileBean")
+@RequestScoped
+public class InputFileBean {
     
     /**
-     * Stores the time.
+     * Stores the part.
      */
-    private String time;
-    
+    private Part part;
+
     /**
-     * Different view.
-     * 
-     * @return "different"
-     */
-    public String differentView() {
-        return "different";
-    }
-    
-    /**
-     * Index view.
-     * 
-     * @return "index"
-     */
-    public String indexView() {
-        return "index";
-    }
-    
-    /**
-     * Initialize the bean.
-     */
-    @PostConstruct
-    public void initialize() { time = new Date().toString() + " - " + System.nanoTime();
-    }
-    
-    /**
-     * Get the time.
+     * Get the file (part).
      * 
      * @return the time.
      */
-    public String getTime() {
-        return time;
+    public Part getFile() {
+        return part;
     }
     
     /**
-     * Same view.
+     * Set the file.
+     * 
+     * @param part the part.
+     */
+    public void setFile(Part part) {
+        this.part = part;
+    }
+    
+    /**
+     * Submit.
      * 
      * @return ""
      */
-    public String sameView() {
+    public String submit() {
         return "";
     }
 }

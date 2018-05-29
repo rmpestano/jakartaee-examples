@@ -19,6 +19,7 @@
         <module>externalContext</module>
         <module>facesContext</module>
         <module>initParameterMap</module>
+        <module>inputFile</module>
         <module>managedProperty</module>
         <module>requestCookieMap</module>
         <module>requestScoped</module>
