@@ -11,7 +11,7 @@
     </parent>
     <artifactId>requestCookieMap</artifactId>
     <packaging>war</packaging>
-    <name>Jakarta EE - JSF - An injected RequestCookieMap example</name>
+    <name>An injected RequestCookieMap example</name>
     <dependencies>
         <dependency>
             <groupId>javax</groupId>

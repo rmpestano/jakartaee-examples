@@ -1,3 +1,3 @@
-# Jakarta EE Examples
+# JakartaEE Examples
 
-1. [JSF](jsf/README.md)
+1. [JSF examples](jsf/README.md)

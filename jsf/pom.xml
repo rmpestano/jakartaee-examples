@@ -12,7 +12,7 @@
     <groupId>jakartaee.examples.jsf</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Jakarta EE - JSF - Examples</name>
+    <name>JSF Examples</name>
     <modules>
         <module>applicationMap</module>
         <module>applicationScoped</module>
@@ -20,6 +20,7 @@
         <module>facesContext</module>
         <module>initParameterMap</module>
         <module>inputFile</module>
+        <module>inputSecret</module>
         <module>managedProperty</module>
         <module>requestCookieMap</module>
         <module>requestScoped</module>
