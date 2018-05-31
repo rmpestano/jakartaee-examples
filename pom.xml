@@ -31,6 +31,7 @@
         </dependencies>
     </dependencyManagement>
     <modules>
+        <module>jaxrs</module>
         <module>jsf</module>
     </modules>
     <properties>
