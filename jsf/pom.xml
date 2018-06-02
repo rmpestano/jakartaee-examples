@@ -22,6 +22,7 @@
         <module>inputFile</module>
         <module>inputSecret</module>
         <module>managedProperty</module>
+        <module>outputText</module>
         <module>requestCookieMap</module>
         <module>requestScoped</module>
         <module>sessionScoped</module>
