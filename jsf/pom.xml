@@ -21,6 +21,8 @@
         <module>initParameterMap</module>
         <module>inputFile</module>
         <module>inputSecret</module>
+        <module>managedConverter</module>
+        <module>managedValidator</module>
         <module>managedProperty</module>
         <module>outputText</module>
         <module>requestCookieMap</module>
