@@ -13,4 +13,7 @@
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
     <name>JAX-RS Examples</name>
+    <modules>
+        <module>helloWorld</module>
+    </modules>
 </project>
