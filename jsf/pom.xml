@@ -27,6 +27,7 @@
         <module>outputText</module>
         <module>requestCookieMap</module>
         <module>requestScoped</module>
+        <module>sessionMap</module>
         <module>sessionScoped</module>
         <module>viewMap</module>
         <module>viewScoped</module>

@@ -10,39 +10,39 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.jsf.viewMap;
+package jakartaee.examples.jsf.sessionMap;
 
 import java.io.Serializable;
 import java.util.Map;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.annotation.FacesConfig;
-import javax.faces.annotation.ViewMap;
+import javax.faces.annotation.SessionMap;
 import javax.inject.Inject;
 import javax.inject.Named;
 
 /**
- * A request scoped bean injecting the view map.
+ * A request scoped bean injecting the session map.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */
-@Named(value = "viewMapBean")
+@Named(value = "sessionMapBean")
 @RequestScoped
 @FacesConfig(version = FacesConfig.Version.JSF_2_3)
-public class ViewMapBean implements Serializable {
+public class SessionMapBean implements Serializable {
     
     /**
      * Stores the application map.
      */
     @Inject
-    @ViewMap
-    private Map<String, Object> viewMap;
+    @SessionMap
+    private Map<String, Object> sessionMap;
     
     /**
      * Get the view map.
      * 
      * @return the view map.
      */
-    public Map<String, Object> getViewMap() {
-        return viewMap;
+    public Map<String, Object> getSessionMap() {
+        return sessionMap;
     }
 }
