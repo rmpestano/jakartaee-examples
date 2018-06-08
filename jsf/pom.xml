@@ -28,6 +28,7 @@
         <module>requestCookieMap</module>
         <module>requestScoped</module>
         <module>sessionScoped</module>
+        <module>viewMap</module>
         <module>viewScoped</module>
     </modules>
 </project>
