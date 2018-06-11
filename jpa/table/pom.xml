@@ -9,9 +9,9 @@
         <groupId>jakartaee.examples.jpa</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>entity</artifactId>
+    <artifactId>table</artifactId>
     <packaging>war</packaging>
-    <name>An @Entity example</name>
+    <name>A @Table example</name>
     <dependencies>
         <dependency>
             <groupId>javax</groupId>

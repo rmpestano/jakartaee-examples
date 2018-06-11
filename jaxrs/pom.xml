@@ -14,6 +14,7 @@
     <packaging>pom</packaging>
     <name>JAX-RS Examples</name>
     <modules>
+        <module>get</module>
         <module>helloWorld</module>
         <module>post</module>
     </modules>
