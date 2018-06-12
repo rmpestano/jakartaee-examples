@@ -17,5 +17,6 @@
         <module>get</module>
         <module>helloWorld</module>
         <module>post</module>
+        <module>put</module>
     </modules>
 </project>
