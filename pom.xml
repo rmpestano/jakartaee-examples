@@ -44,6 +44,7 @@
         <module>jaxrs</module>
         <module>jpa</module>
         <module>jsf</module>
+        <module>servlet</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
