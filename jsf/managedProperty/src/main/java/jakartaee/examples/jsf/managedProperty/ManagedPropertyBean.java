@@ -10,27 +10,38 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.samples.jsf.requestscoped;
+package jakartaee.examples.jsf.managedProperty;
 
-import java.util.Date;
-import javax.inject.Named;
+import java.io.Serializable;
 import javax.enterprise.context.RequestScoped;
+import javax.faces.annotation.FacesConfig;
+import javax.faces.annotation.ManagedProperty;
+import javax.inject.Inject;
+import javax.inject.Named;
 
 /**
- * A request scoped bean.
+ * A bean using a managed property.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */
-@Named(value = "requestScopedBean")
+@Named(value = "managedPropertyBean")
 @RequestScoped
-public class RequestScopedBean {
-
+@FacesConfig(version = FacesConfig.Version.JSF_2_3)
+public class ManagedPropertyBean implements Serializable {
+    
     /**
-     * Get the time.
-     * 
-     * @return the time.
+     * Stores the context path using a managed property.
      */
-    public String getTime() {
-        return new Date().toString() + " - " + System.nanoTime();
+    @Inject
+    @ManagedProperty(value = "#{externalContext.requestContextPath}")
+    private String contextPath;
+    
+    /**
+     * Get the context path.
+     * 
+     * @return the context path.
+     */
+    public String getContextPath() {
+        return contextPath;
     }
 }

@@ -10,38 +10,37 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.samples.jsf.managedProperty;
+package jakartaee.examples.jsf.externalContext;
 
 import java.io.Serializable;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.annotation.FacesConfig;
-import javax.faces.annotation.ManagedProperty;
+import javax.faces.context.ExternalContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 
 /**
- * A bean using a managed property.
+ * A request scoped bean injecting the ExternalContext.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */
-@Named(value = "managedPropertyBean")
+@Named(value = "externalContextBean")
 @RequestScoped
 @FacesConfig(version = FacesConfig.Version.JSF_2_3)
-public class ManagedPropertyBean implements Serializable {
+public class ExternalContextBean implements Serializable {
     
     /**
-     * Stores the context path using a managed property.
+     * Stores the ExternalContext.
      */
     @Inject
-    @ManagedProperty(value = "#{externalContext.requestContextPath}")
-    private String contextPath;
+    private ExternalContext externalContext;
     
     /**
-     * Get the context path.
+     * Get the ExternalContext.
      * 
-     * @return the context path.
+     * @return the ExternalContext.
      */
-    public String getContextPath() {
-        return contextPath;
+    public ExternalContext getExternalContext() {
+        return externalContext;
     }
 }

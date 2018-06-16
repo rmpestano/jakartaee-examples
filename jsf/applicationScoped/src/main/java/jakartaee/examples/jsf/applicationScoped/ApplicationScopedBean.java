@@ -10,37 +10,42 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.samples.jsf.facesContext;
+package jakartaee.examples.jsf.applicationScoped;
 
 import java.io.Serializable;
-import javax.enterprise.context.RequestScoped;
-import javax.faces.annotation.FacesConfig;
-import javax.faces.context.FacesContext;
-import javax.inject.Inject;
+import java.util.Date;
+import javax.annotation.PostConstruct;
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Named;
 
 /**
- * A request scoped bean injecting the FacesContext.
+ * An application scoped bean.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */
-@Named(value = "facesContextBean")
-@RequestScoped
-@FacesConfig(version = FacesConfig.Version.JSF_2_3)
-public class FacesContextBean implements Serializable {
+@Named(value = "applicationScopedBean")
+@ApplicationScoped
+public class ApplicationScopedBean implements Serializable {
     
     /**
-     * Stores the FacesContext.
+     * Stores the time.
      */
-    @Inject
-    private FacesContext facesContext;
+    private String time;
+
+    /**
+     * Initialize the bean.
+     */
+    @PostConstruct
+    public void initialize() {
+        time = new Date().toString() + " - " + System.nanoTime();
+    }
     
     /**
-     * Get the FacesContext.
+     * Get the time.
      * 
-     * @return the FacesContext.
+     * @return the time.
      */
-    public FacesContext getFacesContext() {
-        return facesContext;
+    public String getTime() {
+        return time;
     }
 }

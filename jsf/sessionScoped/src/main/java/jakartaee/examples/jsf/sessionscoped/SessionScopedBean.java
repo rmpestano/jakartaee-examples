@@ -10,22 +10,22 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.samples.jsf.applicationScoped;
+package jakartaee.examples.jsf.sessionscoped;
 
 import java.io.Serializable;
 import java.util.Date;
 import javax.annotation.PostConstruct;
-import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Named;
+import javax.enterprise.context.SessionScoped;
 
 /**
- * An application scoped bean.
+ * A session scoped bean.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */
-@Named(value = "applicationScopedBean")
-@ApplicationScoped
-public class ApplicationScopedBean implements Serializable {
+@Named(value = "sessionScopedBean")
+@SessionScoped
+public class SessionScopedBean implements Serializable {
     
     /**
      * Stores the time.

@@ -10,37 +10,37 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.samples.jsf.externalContext;
+package jakartaee.examples.jsf.facesContext;
 
 import java.io.Serializable;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.annotation.FacesConfig;
-import javax.faces.context.ExternalContext;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 
 /**
- * A request scoped bean injecting the ExternalContext.
+ * A request scoped bean injecting the FacesContext.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */
-@Named(value = "externalContextBean")
+@Named(value = "facesContextBean")
 @RequestScoped
 @FacesConfig(version = FacesConfig.Version.JSF_2_3)
-public class ExternalContextBean implements Serializable {
+public class FacesContextBean implements Serializable {
     
     /**
-     * Stores the ExternalContext.
+     * Stores the FacesContext.
      */
     @Inject
-    private ExternalContext externalContext;
+    private FacesContext facesContext;
     
     /**
-     * Get the ExternalContext.
+     * Get the FacesContext.
      * 
-     * @return the ExternalContext.
+     * @return the FacesContext.
      */
-    public ExternalContext getExternalContext() {
-        return externalContext;
+    public FacesContext getFacesContext() {
+        return facesContext;
     }
 }
