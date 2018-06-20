@@ -1,3 +1,3 @@
-# An injected ApplicationMap example
+# A @WebServlet example
 
-This example demonstrates how to use the @ApplicationMap annotation into a bean.
+This example demonstrates how to use the @WebServlet on a Servlet class.
