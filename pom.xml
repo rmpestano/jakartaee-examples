@@ -45,6 +45,7 @@
         <module>jpa</module>
         <module>jsf</module>
         <module>servlet</module>
+        <module>soteria</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
