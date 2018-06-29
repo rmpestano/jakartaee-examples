@@ -44,6 +44,7 @@
         <module>jaxrs</module>
         <module>jpa</module>
         <module>jsf</module>
+        <module>jsonb</module>
         <module>servlet</module>
         <module>soteria</module>
     </modules>
