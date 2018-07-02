@@ -19,6 +19,7 @@
         <module>commandScript</module>
         <module>externalContext</module>
         <module>facesContext</module>
+        <module>form</module>
         <module>initParameterMap</module>
         <module>inputFile</module>
         <module>inputSecret</module>
