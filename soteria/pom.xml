@@ -14,6 +14,7 @@
     <packaging>pom</packaging>
     <name>Soteria Examples</name>
     <modules>
+        <module>basicAuth</module>
         <module>customFormWithJsf</module>
     </modules>
 </project>
