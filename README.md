@@ -6,3 +6,4 @@
 4. [JSON-B examples](jsonb/README.md)
 5. [Servlet examples](servlet/README.md)
 6. [Soteria examples](soteria/README.md)
+7. [WebSocket examples](websocket/README.md)

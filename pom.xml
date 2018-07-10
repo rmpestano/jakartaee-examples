@@ -47,6 +47,7 @@
         <module>jsonb</module>
         <module>servlet</module>
         <module>soteria</module>
+        <module>annotatedServerEndpoint</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
