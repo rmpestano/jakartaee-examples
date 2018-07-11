@@ -14,9 +14,12 @@
     <packaging>pom</packaging>
     <name>JAX-RS Examples</name>
     <modules>
+        <module>consumes</module>
+        <module>delete</module>
         <module>get</module>
         <module>helloWorld</module>
         <module>post</module>
+        <module>produces</module>
         <module>put</module>
     </modules>
 </project>
