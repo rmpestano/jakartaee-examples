@@ -16,6 +16,7 @@
     <modules>
         <module>httpServletMapping</module>
         <module>pushBuilder</module>
+        <module>servletContextListener</module>
         <module>webServlet</module>
     </modules>
 </project>
