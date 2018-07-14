@@ -16,5 +16,6 @@
     <modules>
         <module>basicAuth</module>
         <module>customFormWithJsf</module>
+        <module>servlet</module>
     </modules>
 </project>
