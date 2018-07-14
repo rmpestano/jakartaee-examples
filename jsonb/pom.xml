@@ -15,5 +15,6 @@
     <name>JSON-B Examples</name>
     <modules>
         <module>fromJsonToObject</module>
+        <module>fromObjectToJson</module>
     </modules>
 </project>
