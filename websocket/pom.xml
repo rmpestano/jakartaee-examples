@@ -12,5 +12,6 @@
     <name>WebSocket Examples</name>
     <modules>
         <module>annotatedServerEndpoint</module>
+        <module>onOpen</module>
     </modules>
 </project>
