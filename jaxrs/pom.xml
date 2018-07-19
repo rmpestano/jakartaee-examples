@@ -18,6 +18,7 @@
         <module>delete</module>
         <module>get</module>
         <module>helloWorld</module>
+        <module>pathParam</module>
         <module>post</module>
         <module>produces</module>
         <module>put</module>
