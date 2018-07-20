@@ -16,5 +16,6 @@
     <modules>
         <module>fromJsonToObject</module>
         <module>fromObjectToJson</module>
+        <module>nullValues</module>
     </modules>
 </project>
