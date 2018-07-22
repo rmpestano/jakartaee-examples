@@ -12,6 +12,7 @@
     <name>WebSocket Examples</name>
     <modules>
         <module>annotatedServerEndpoint</module>
+        <module>onClose</module>
         <module>onOpen</module>
     </modules>
 </project>
