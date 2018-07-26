@@ -29,6 +29,7 @@
         <module>managedProperty</module>
         <module>managedValidator</module>
         <module>outputText</module>
+        <module>param</module>
         <module>requestCookieMap</module>
         <module>requestScoped</module>
         <module>sessionMap</module>
