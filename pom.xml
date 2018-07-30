@@ -45,6 +45,7 @@
         <module>jpa</module>
         <module>jsf</module>
         <module>jsonb</module>
+        <module>jsonp</module>
         <module>servlet</module>
         <module>soteria</module>
         <module>websocket</module>
