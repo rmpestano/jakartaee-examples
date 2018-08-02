@@ -16,6 +16,7 @@
     <modules>
         <module>basicAuth</module>
         <module>customFormWithJsf</module>
+        <module>formAuth</module>
         <module>inMemoryIdentityStore</module>
         <module>servlet</module>
     </modules>
