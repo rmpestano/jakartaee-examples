@@ -13,6 +13,7 @@
     <modules>
         <module>annotatedServerEndpoint</module>
         <module>onClose</module>
+        <module>onError</module>
         <module>onOpen</module>
     </modules>
 </project>
