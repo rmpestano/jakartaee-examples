@@ -23,5 +23,6 @@
         <module>post</module>
         <module>produces</module>
         <module>put</module>
+        <module>queryParam</module>
     </modules>
 </project>

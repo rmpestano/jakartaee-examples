@@ -9,3 +9,4 @@
 7. [A @POST example](post/README.md)
 8. [A @Produces example](produces/README.md)
 9. [A @PUT example](put/README.md)
+10. [A @QueryParam example](queryParam/README.md)
