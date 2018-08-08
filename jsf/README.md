@@ -10,6 +10,7 @@
 8. [An injected InitParameterMap example](initParameterMap/README.md)
 9. [An h:inputFile example](inputFile/README.md)
 10. [An h:inputSecret example](inputSecret/README.md)
+10. [An h:inputText example](inputText/README.md)
 11. [A h:link example](link/README.md)
 12. [A CDI managed converter example](managedConverter/README.md)
 13. [An injected ManagedProperty example](managedProperty/README.md)

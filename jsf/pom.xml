@@ -24,6 +24,7 @@
         <module>initParameterMap</module>
         <module>inputFile</module>
         <module>inputSecret</module>
+        <module>inputText</module>
         <module>link</module>
         <module>managedConverter</module>
         <module>managedProperty</module>
