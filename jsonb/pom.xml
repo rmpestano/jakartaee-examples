@@ -16,6 +16,8 @@
     <modules>
         <module>fromJsonToObject</module>
         <module>fromObjectToJson</module>
+        <module>jsonbProperty</module>
+        <module>jsonbTransient</module>
         <module>nullValues</module>
     </modules>
 </project>
