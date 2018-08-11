@@ -15,5 +15,6 @@
     <name>JSON-P Examples</name>
     <modules>
         <module>jsonReader</module>
+        <module>jsonWriter</module>
     </modules>
 </project>
