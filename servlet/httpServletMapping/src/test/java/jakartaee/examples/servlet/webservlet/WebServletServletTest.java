@@ -82,7 +82,6 @@ public class WebServletServletTest {
     public void testWebServletServlet() throws Exception {
         TextPage page = webClient.getPage(baseUrl);
         String content = page.getContent();
-        System.out.println(content);
         assertTrue(content.contains("jakartaee.examples.servlet.webservlet.WebServletServlet"));
         assertTrue(content.contains("/*"));
         assertTrue(content.contains("PATH"));
