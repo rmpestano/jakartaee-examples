@@ -10,7 +10,7 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.servlet.webServlet;
+package jakartaee.examples.servlet.webservlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
