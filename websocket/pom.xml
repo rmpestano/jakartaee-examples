@@ -12,6 +12,7 @@
     <name>WebSocket Examples</name>
     <modules>
         <module>annotatedServerEndpoint</module>
+        <module>encoderDecoder</module>
         <module>onClose</module>
         <module>onError</module>
         <module>onOpen</module>
