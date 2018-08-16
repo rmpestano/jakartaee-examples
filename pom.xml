@@ -41,6 +41,7 @@
         </dependencies>
     </dependencyManagement>
     <modules>
+        <module>beanvalidation</module>
         <module>jaxrs</module>
         <module>jpa</module>
         <module>jsf</module>
