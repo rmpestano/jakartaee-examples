@@ -15,6 +15,7 @@
     <name>JAX-RS Examples</name>
     <modules>
         <module>consumes</module>
+        <module>defaultValue</module>
         <module>delete</module>
         <module>get</module>
         <module>helloWorld</module>

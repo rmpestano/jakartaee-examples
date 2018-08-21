@@ -34,12 +34,34 @@
                 <version>8.0</version>
             </dependency>
             <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>             
+            </dependency>
+            <dependency>
+                <groupId>net.sourceforge.htmlunit</groupId>
+                <artifactId>htmlunit</artifactId>
+                <version>2.32</version>
+            </dependency>
+            <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpclient</artifactId>
                 <version>4.5.5</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.htmlunit</groupId>
+            <artifactId>htmlunit</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
     <modules>
         <module>beanvalidation</module>
         <module>jaxrs</module>
@@ -50,7 +72,8 @@
         <module>servlet</module>
         <module>soteria</module>
         <module>websocket</module>
-    </modules><profiles>
+    </modules>
+    <profiles>
         <profile>
             <id>noserver</id>
             <activation>
@@ -80,18 +103,6 @@
                 </dependencies>
             </dependencyManagement>
             <dependencies>
-                <dependency>
-                    <groupId>junit</groupId>
-                    <artifactId>junit</artifactId>
-                    <version>4.12</version>
-                    <scope>test</scope>               
-                </dependency>
-                <dependency>
-                    <groupId>net.sourceforge.htmlunit</groupId>
-                    <artifactId>htmlunit</artifactId>
-                    <version>2.32</version>
-                    <scope>test</scope>
-                </dependency>
                 <dependency>
                     <groupId>org.jboss.arquillian.container</groupId>
                     <artifactId>arquillian-container-test-api</artifactId>
@@ -161,18 +172,6 @@
                 </dependencies>
             </dependencyManagement>
             <dependencies>
-                <dependency>
-                    <groupId>junit</groupId>
-                    <artifactId>junit</artifactId>
-                    <version>4.12</version>
-                    <scope>test</scope>               
-                </dependency>
-                <dependency>
-                    <groupId>net.sourceforge.htmlunit</groupId>
-                    <artifactId>htmlunit</artifactId>
-                    <version>2.32</version>
-                    <scope>test</scope>
-                </dependency>
                 <dependency>
                     <groupId>org.jboss.arquillian.container</groupId>
                     <artifactId>arquillian-container-test-api</artifactId>
