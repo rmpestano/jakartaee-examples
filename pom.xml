@@ -64,6 +64,7 @@
     </dependencies>
     <modules>
         <module>beanvalidation</module>
+        <module>eesecurity</module>
         <module>jaxrs</module>
         <module>jpa</module>
         <module>jsf</module>
@@ -71,7 +72,6 @@
         <module>jsonp</module>
         <module>servlet</module>
         <module>websocket</module>
-        <module>eesecurity</module>
     </modules>
     <profiles>
         <profile>
