@@ -12,7 +12,7 @@
     <groupId>jakartaee.examples.soteria</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Soteria Examples</name>
+    <name>Security Examples</name>
     <modules>
         <module>basicAuth</module>
         <module>customFormWithJsf</module>

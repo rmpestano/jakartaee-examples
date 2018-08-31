@@ -70,8 +70,8 @@
         <module>jsonb</module>
         <module>jsonp</module>
         <module>servlet</module>
-        <module>soteria</module>
         <module>websocket</module>
+        <module>eesecurity</module>
     </modules>
     <profiles>
         <profile>
