@@ -8,38 +8,10 @@
         <title>An @OnError example</title>
     </h:head>
     <h:body>
-        <script>
-            var wsUri = "ws://#{request.serverName}:#{request.serverPort}#{request.contextPath}/echo";
-            var output;
-
-            function init() {
-                output = document.getElementById("output");
-                websocket = new WebSocket(wsUri);
-                websocket.onopen = function (evt) {
-                    onOpen(evt);
-                };
-                websocket.onmessage = function (evt) {
-                    onMessage(evt);
-                };
-            }
-            function onMessage(evt) {
-                var p = document.createElement("p");
-                p.innerHTML = evt.data;
-                output.appendChild(p);
-            }
-            function onOpen(evt) {
-                websocket.send("And we got back what we sent!");
-            }
-            window.addEventListener("load", init, false);
-        </script>
-
         <h2>An @OnError example</h2>
         <p>
-            The example below automatically will connect to the endpoint, which
-            echos back the response and then will close the WebSocket from the
-            server side, and then try to send the response again which will 
-            trigger the @OnError. See your server log for a message.
+            The example is run as part of the build. See the
+            OnErrorEndpointTest.java file for more information.
         </p>
-        <div id="output"></div>
     </h:body>
 </html>

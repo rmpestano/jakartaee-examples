@@ -13,28 +13,28 @@
 package jakartaee.examples.websocket.onerror;
 
 import java.io.IOException;
-import javax.websocket.OnError;
 import javax.websocket.OnMessage;
+import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
 /**
- * An @OnError example.
+ * A ServerEndpoint for the @OnError example.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */
 @ServerEndpoint("/echo")
 public class OnErrorEndpoint {
-
+    
     /**
-     * Handle the OnError.
+     * Handle the on open event.
      * 
-     * @param cause the cause.
+     * @param session the session.
+     * @throws IOException when an I/O error occurs.
      */
-    @OnError
-    public void onError(Throwable cause) {
-        System.out.println("And an error occured so what do we do now?");
-        cause.printStackTrace(System.out);
+    @OnOpen
+    public void onOpen(Session session) throws IOException {
+        session.getBasicRemote().sendText("Open for business");
     }
 
     /**
@@ -46,8 +46,6 @@ public class OnErrorEndpoint {
     @OnMessage
     public void onMessage(Session session, String message) {
         try {
-            session.getBasicRemote().sendText(message);
-            session.close();
             session.getBasicRemote().sendText(message);
         } catch (IOException ioe) {
         }

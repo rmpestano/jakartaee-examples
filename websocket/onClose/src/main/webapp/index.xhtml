@@ -8,42 +8,10 @@
         <title>An @OnClose example</title>
     </h:head>
     <h:body>
-        <script>
-            var wsUri = "ws://#{request.serverName}:#{request.serverPort}#{request.contextPath}/echo";
-            var output;
-
-            function init() {
-                output = document.getElementById("output");
-                websocket = new WebSocket(wsUri);
-                websocket.onopen = function (evt) {
-                    onOpen(evt);
-                };
-                websocket.onmessage = function (evt) {
-                    onMessage(evt);
-                };
-            }
-            function onMessage(evt) {
-                var p = document.createElement("p");
-                p.innerHTML = evt.data;
-                output.appendChild(p);
-            }
-
-            function onOpen(evt) {
-                websocket.send("And we got back what we sent!");
-            }
-
-            window.addEventListener("load", init, false);
-
-        </script>
-
         <h2>An @OnClose example</h2>
         <p>
-            The example below automatically will connect to the endpoint, which
-            echos back the response and then will close the WebSocket from the
-            server side which will trigger the @OnClose. See your server log
-            for a message logged AFTER closing the WebSocket.
+            The example is run as part of the build. See the
+            OnClosedEndpointTest.java file for more information.
         </p>
-        <div id="output"></div>
     </h:body>
 </html>
-

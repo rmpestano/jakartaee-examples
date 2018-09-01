@@ -10,24 +10,39 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.websocket.annotatedServerEndpoint;
+package jakartaee.examples.websocket.onopen;
 
 import java.io.IOException;
+import java.util.Date;
 import javax.websocket.OnMessage;
+import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
 /**
- * An annotated ServerEndpoint example.
+ * A ServerEndpoint for the @OnOpen example.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */
 @ServerEndpoint("/echo")
-public class AnnotatedServerEndpoint {
+public class OnOpenEndpoint {
+
+    /**
+     * Handle the onOpen.
+     * 
+     * @param session the session.
+     */
+    @OnOpen
+    public void onOpen(Session session) {
+        try {
+            session.getBasicRemote().sendText("Session started at " + new Date().toString());
+        } catch (IOException ioe) {
+        }
+    }
 
     /**
      * Handle the text message.
-     * 
+     *
      * @param session the session.
      * @param message the message.
      */

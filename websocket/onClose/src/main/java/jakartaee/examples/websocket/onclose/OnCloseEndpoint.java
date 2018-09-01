@@ -13,13 +13,13 @@
 package jakartaee.examples.websocket.onclose;
 
 import java.io.IOException;
-import javax.websocket.OnClose;
 import javax.websocket.OnMessage;
+import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
 /**
- * An @OnClose example.
+ * The ServerEndpoint for the @OnClose example.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */
@@ -27,25 +27,26 @@ import javax.websocket.server.ServerEndpoint;
 public class OnCloseEndpoint {
 
     /**
-     * Handle the onClose.
-     */
-    @OnClose
-    public void onClose() {
-        System.out.println("And now it is time for some cleanup");
-    }
-
-    /**
      * Handle the text message.
      *
      * @param session the session.
      * @param message the message.
+     * @throws IOException when an I/O error occurs.
      */
     @OnMessage
-    public void onMessage(Session session, String message) {
-        try {
-            session.getBasicRemote().sendText(message);
-            session.close();
-        } catch (IOException ioe) {
-        }
+    public void onMessage(Session session, String message) throws IOException {
+        session.getBasicRemote().sendText(message);
+        session.close();
+    }
+
+    /**
+     * Handle to onOpen.
+     *
+     * @param session the session.
+     * @throws IOException when an I/O error occurs.
+     */
+    @OnOpen
+    public void onOpen(Session session) throws IOException {
+        session.getBasicRemote().sendText("Opening connection");
     }
 }
