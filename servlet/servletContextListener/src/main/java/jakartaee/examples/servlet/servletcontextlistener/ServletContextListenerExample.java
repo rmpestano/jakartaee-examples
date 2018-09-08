@@ -10,16 +10,15 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.servlet.servletContextListener;
+package jakartaee.examples.servlet.servletcontextlistener;
 
-import java.util.Enumeration;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
 /**
- * An example ServletContextListener.
+ * The ServletContextListener for the ServletContextListener example.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */
@@ -29,17 +28,11 @@ public class ServletContextListenerExample implements ServletContextListener {
     /**
      * Handles the servlet context initialized event.
      * 
-     * @param servletContextEvent the servlet context initialized event. 
+     * @param event the servlet context initialized event. 
      */
     @Override
-    public void contextInitialized(ServletContextEvent servletContextEvent) {
-        ServletContext servletContext = servletContextEvent.getServletContext();
-        Enumeration<String> attributeNames = servletContext.getAttributeNames();
-        System.out.println("=== ServletContext attributes ===");
-        while(attributeNames.hasMoreElements()) {
-            String attributeName = attributeNames.nextElement();
-            System.out.println(attributeName + " = " + servletContext.getAttribute(attributeName));
-        }
-        System.out.println("=== /ServletContext attributes ===");
+    public void contextInitialized(ServletContextEvent event) {
+        ServletContext servletContext = event.getServletContext();
+        servletContext.setAttribute("contextInitializedCalled", "true");
     }
 }

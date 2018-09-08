@@ -18,7 +18,7 @@ import javax.servlet.ServletRequestListener;
 import javax.servlet.annotation.WebListener;
 
 /**
- * An example ServletRequestListener.
+ * The ServletRequestListener for the ServletRequestListener example.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */
@@ -46,5 +46,6 @@ public class ServletRequestListenerExample implements ServletRequestListener {
     public void requestInitialized(ServletRequestEvent event) {
         System.out.println("Request was initialized at: " + new Date());
         event.getServletRequest().setAttribute("startTime", System.currentTimeMillis());
+        event.getServletRequest().setAttribute("requestInitializedCalled", "true");
     }
 }

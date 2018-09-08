@@ -10,23 +10,24 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.servlet.webServlet;
+package jakartaee.examples.servlet.httpservletmapping;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletMapping;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * A @WebServlet servlet.
+ * The servlet for the HTTP servlet mapping example.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */
 @WebServlet(urlPatterns = "/*")
-public class WebServletServlet extends HttpServlet {
+public class HttpServletMappingServlet extends HttpServlet {
 
     /**
      * Process GET.
@@ -39,6 +40,10 @@ public class WebServletServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter writer = response.getWriter();
-        writer.println("And we called an @WebServlet servlet");
+        HttpServletMapping httpServletMapping = request.getHttpServletMapping();
+        writer.println("Servlet name: " + httpServletMapping.getServletName());
+        writer.println("Pattern: " + httpServletMapping.getPattern());
+        writer.println("Match value: " + httpServletMapping.getMatchValue());
+        writer.println("Mapping match: " + httpServletMapping.getMappingMatch().toString());
     }
 }

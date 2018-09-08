@@ -10,7 +10,7 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.servlet.webservlet;
+package jakartaee.examples.servlet.httpservletmapping;
 
 import com.gargoylesoftware.htmlunit.TextPage;
 import com.gargoylesoftware.htmlunit.WebClient;
@@ -28,12 +28,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- * The JUnit tests for the WebServletServlet class.
+ * The JUnit tests for the HTTP servlet mapping example.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */
 @RunWith(Arquillian.class)
-public class WebServletServletTest {
+public class HttpServletMappingServletTest {
 
     /**
      * Stores the base URL.
@@ -61,7 +61,7 @@ public class WebServletServletTest {
      */
     @Deployment
     public static WebArchive createDeployment() {
-        return create(WebArchive.class).addClass(WebServletServlet.class);
+        return create(WebArchive.class).addClass(HttpServletMappingServlet.class);
     }
 
     /**
@@ -73,16 +73,16 @@ public class WebServletServletTest {
     }
 
     /**
-     * Test the WebServletServlet.
+     * Test the HTTP servlet mapping.
      * 
      * @throws Exception when a serious error occurs.
      */
     @RunAsClient
     @Test
-    public void testWebServletServlet() throws Exception {
+    public void testHttpServletMapping() throws Exception {
         TextPage page = webClient.getPage(baseUrl);
         String content = page.getContent();
-        assertTrue(content.contains("jakartaee.examples.servlet.webservlet.WebServletServlet"));
+        assertTrue(content.contains("jakartaee.examples.servlet.httpservletmapping.HttpServletMappingServlet"));
         assertTrue(content.contains("/*"));
         assertTrue(content.contains("PATH"));
     }

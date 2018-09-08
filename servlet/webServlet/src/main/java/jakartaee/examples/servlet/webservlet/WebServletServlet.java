@@ -17,12 +17,11 @@ import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletMapping;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * A @WebServlet servlet.
+ * The Servlet for the @WebServlet example.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */
@@ -40,10 +39,6 @@ public class WebServletServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter writer = response.getWriter();
-        HttpServletMapping httpServletMapping = request.getHttpServletMapping();
-        writer.println("Servlet name: " + httpServletMapping.getServletName());
-        writer.println("Pattern: " + httpServletMapping.getPattern());
-        writer.println("Match value: " + httpServletMapping.getMatchValue());
-        writer.println("Mapping match: " + httpServletMapping.getMappingMatch().toString());
+        writer.println("And we called an @WebServlet servlet");
     }
 }
