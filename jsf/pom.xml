@@ -15,6 +15,7 @@
     <name>JSF Examples</name>
     <modules>
         <module>actionListener</module>
+        <module>ajax</module>
         <module>applicationMap</module>
         <module>applicationScoped</module>
         <module>commandScript</module>
