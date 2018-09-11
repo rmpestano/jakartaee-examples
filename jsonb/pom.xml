@@ -17,6 +17,7 @@
         <module>formatting</module>
         <module>fromJsonToObject</module>
         <module>fromObjectToJson</module>
+        <module>jsonbDateFormat</module>
         <module>jsonbProperty</module>
         <module>jsonbTransient</module>
         <module>nullValues</module>
