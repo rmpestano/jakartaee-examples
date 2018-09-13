@@ -17,10 +17,11 @@ import com.gargoylesoftware.htmlunit.html.HtmlInput;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import java.io.File;
 import java.net.URL;
+import org.arquillian.container.chameleon.runner.ArquillianChameleon;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.container.test.api.RunAsClient;
-import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.arquillian.test.api.ArquillianResource;
+import jakartaee.examples.test.commons.JakartaEEServer;
 import static org.jboss.shrinkwrap.api.ShrinkWrap.create;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.After;
@@ -34,7 +35,8 @@ import org.junit.runner.RunWith;
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */
-@RunWith(Arquillian.class)
+@RunWith(ArquillianChameleon.class)
+@JakartaEEServer
 public class JsonParserTest {
 
     /**

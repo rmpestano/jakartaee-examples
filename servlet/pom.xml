@@ -20,4 +20,13 @@
         <module>servletRequestListener</module>
         <module>webServlet</module>
     </modules>
+    
+    <dependencies>
+        <dependency>
+             <groupId>jakartaee.examples</groupId>
+             <artifactId>test-commons</artifactId>
+             <version>${project.version}</version>
+             <scope>test</scope>
+        </dependency>    
+    </dependencies>   
 </project>

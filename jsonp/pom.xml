@@ -18,4 +18,14 @@
         <module>jsonReader</module>
         <module>jsonWriter</module>
     </modules>
+    
+    <dependencies>
+        <dependency>
+            <!-- provides @JakartaEEServer arquillian annotation -->
+             <groupId>jakartaee.examples</groupId>
+             <artifactId>test-commons</artifactId>
+             <version>${project.version}</version>
+             <scope>test</scope>
+        </dependency>    
+    </dependencies>   
 </project>
