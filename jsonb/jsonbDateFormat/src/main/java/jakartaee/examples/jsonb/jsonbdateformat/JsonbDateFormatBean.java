@@ -13,7 +13,6 @@
 package jakartaee.examples.jsonb.jsonbdateformat;
 
 import java.util.Calendar;
-import java.util.Date;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 import javax.json.bind.JsonbBuilder;
