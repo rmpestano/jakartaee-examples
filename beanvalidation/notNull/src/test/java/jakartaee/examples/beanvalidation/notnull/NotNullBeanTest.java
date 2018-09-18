@@ -95,10 +95,10 @@ public class NotNullBeanTest {
         String content = page.asXml();
         assertTrue(content.contains("This example demonstrates the use of @NotNull"));
         page = page.getElementByName("form:submitButton").click();
-        assertTrue(page.asXml().contains("must not be null"));
+        assertTrue(page.asXml().contains("This cannot be null"));
         HtmlInput inputText = (HtmlInput) page.getElementByName("form:inputText");
         inputText.setValueAttribute("123");
         page = page.getElementByName("form:submitButton").click();
-        assertFalse(page.asXml().contains("must not be null"));
+        assertFalse(page.asXml().contains("This cannot be null"));
     }
 }

@@ -24,7 +24,7 @@ public class NotNullModel {
     /**
      * Stores the string.
      */
-    @NotNull
+    @NotNull(message = "This cannot be null")
     private String string;
     
     /**
