@@ -14,6 +14,7 @@
     <packaging>pom</packaging>
     <name>Bean Validation Examples</name>
     <modules>
+        <module>min</module>
         <module>notNull</module>
         <module>size</module>
     </modules>
