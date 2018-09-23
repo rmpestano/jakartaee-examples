@@ -19,7 +19,7 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
-             <plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.0</version>
@@ -59,7 +59,24 @@
                 <artifactId>httpclient</artifactId>
                 <version>4.5.5</version>
             </dependency>
-	    <dependency>
+            <dependency>
+                <groupId>org.arquillian</groupId>
+                <artifactId>arquillian-universe</artifactId>
+                <version>1.1.15.2</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish.jersey.core</groupId>
+                <artifactId>jersey-client</artifactId>
+                <version>2.27</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish.jersey.inject</groupId>
+                <artifactId>jersey-hk2</artifactId>
+                <version>2.27</version>
+            </dependency>
+            <dependency>
                 <groupId>org.glassfish.tyrus</groupId>
                 <artifactId>tyrus-client</artifactId>
                 <version>1.13.1</version>
@@ -68,13 +85,6 @@
                 <groupId>org.glassfish.tyrus</groupId>
                 <artifactId>tyrus-container-grizzly-client</artifactId>
                 <version>1.13.1</version>
-            </dependency>
-            <dependency>
-                <groupId>org.arquillian</groupId>
-                <artifactId>arquillian-universe</artifactId>
-                <version>1.1.15.2</version>
-                <scope>import</scope>
-                <type>pom</type>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -90,6 +100,18 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>org.arquillian.container</groupId>
+            <artifactId>arquillian-container-chameleon</artifactId>
+            <version>1.0.0.CR3</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.arquillian.container</groupId>
+            <artifactId>arquillian-container-chameleon-runner</artifactId>
+            <version>1.0.0.CR3</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>org.arquillian.universe</groupId>
             <artifactId>arquillian-junit</artifactId>
             <scope>test</scope>
@@ -99,20 +121,7 @@
             <groupId>org.jboss.arquillian.protocol</groupId>
             <artifactId>arquillian-protocol-servlet</artifactId>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.arquillian.container</groupId>
-            <artifactId>arquillian-container-chameleon</artifactId>
-            <version>1.0.0.CR3</version>
-            <scope>test</scope>
-        </dependency>    
-        
-        <dependency>
-            <groupId>org.arquillian.container</groupId>
-            <artifactId>arquillian-container-chameleon-runner</artifactId>
-            <version>1.0.0.CR3</version>
-            <scope>test</scope>
-        </dependency>
+        </dependency> 
     </dependencies>
     <modules>
         <module>beanvalidation</module>
@@ -146,33 +155,15 @@
             </build>
         </profile>
         <profile>
-            <id>glassfish4</id>
-            <properties>
-                <arquillian.container>glassfish:4.1:managed</arquillian.container>
-            </properties>
-        </profile>
-        <profile>
             <id>glassfish5</id>
-             <properties>
+            <properties>
                 <arquillian.container>glassfish:5.0:managed</arquillian.container>
             </properties>
         </profile>
         <profile>
-            <id>payara4</id>
-             <properties>
-                <arquillian.container>payara:4.1.2.181:managed</arquillian.container>
-            </properties>
-        </profile>
-        <profile>
             <id>payara5</id>
-             <properties>
-                <arquillian.container>payara:5.182:managed</arquillian.container>
-            </properties>
-        </profile>
-        <profile>
-            <id>wildfly8</id>
             <properties>
-                <arquillian.container>wildfly:8.2.0.Final:managed</arquillian.container>
+                <arquillian.container>payara:5.182:managed</arquillian.container>
             </properties>
         </profile>    
         <profile>

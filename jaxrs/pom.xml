@@ -18,6 +18,7 @@
         <module>defaultValue</module>
         <module>delete</module>
         <module>get</module>
+        <module>getClient</module>
         <module>helloWorld</module>
         <module>httpMethod</module>
         <module>pathParam</module>
