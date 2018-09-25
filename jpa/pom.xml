@@ -19,6 +19,8 @@
         <module>createQuery</module>
         <module>entity</module>
         <module>id</module>
+        <module>oneToMany</module>
+        <module>oneToOne</module>
         <module>persistenceContext</module>
         <module>persistenceUnit</module>
         <module>resultStream</module>
