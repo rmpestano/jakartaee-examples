@@ -9,7 +9,7 @@
         <groupId>jakartaee.examples.jsf</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>inputSecret</artifactId>
+    <artifactId>jsfInputSecret</artifactId>
     <packaging>war</packaging>
     <name>A h:inputSecret example</name>
     <dependencies>

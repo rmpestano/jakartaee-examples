@@ -27,6 +27,7 @@
                     <systemPropertyVariables>
                         <!-- arquillian.container property is defined by test profiles -->
                         <arquillian.container>${arquillian.container}</arquillian.container>
+                        <arquillian.chameleonDistributionDownloadFolder>${session.executionRootDirectory}/target/payara5</arquillian.chameleonDistributionDownloadFolder>
                     </systemPropertyVariables>>
                 </configuration>
             </plugin>

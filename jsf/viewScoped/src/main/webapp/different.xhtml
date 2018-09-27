@@ -10,10 +10,10 @@
     <h:body>
         <p>
             As this example uses a ViewScoped bean you will see the time only
-            change when the view changes. Click on "Same view" and it won't
+            change when the view changes. Click on "Same view" and it will not
             change. If you click on "Different view" it will change.
         </p>
-        <h:outputText value="#{viewScopedBean.time}"/>
+        '<h:outputText value="#{viewScopedBean.time}"/>'
         <h:form>
             <h:commandButton value="Same view" action="#{viewScopedBean.sameView}"/>
             <h:commandButton value="Different view" action="#{viewScopedBean.indexView}"/>

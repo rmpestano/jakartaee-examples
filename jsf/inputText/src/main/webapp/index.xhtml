@@ -12,11 +12,11 @@
             This example demonstrates the use of h:inputText. Enter your text,
             submit it and get it echoed back to you.
         </p>
-        <h:form enctype="multipart/form-data">
-            <h:inputText value="#{inputTextBean.text}"/>
-            <h:commandButton value="Submit" action="#{inputTextBean.submit}"/>
+        <h:form id="form">
+            <h:inputText id="input" value="#{inputTextBean.text}"/>
+            <h:commandButton id="submit" value="Submit" action="#{inputTextBean.submit}"/>
         </h:form>
         <br/>
-        This was your inputted text: <h:outputText value="#{inputTextBean.text}"/>
+        This was your inputted text: '<h:outputText value="#{inputTextBean.text}"/>'
     </h:body>
 </html>

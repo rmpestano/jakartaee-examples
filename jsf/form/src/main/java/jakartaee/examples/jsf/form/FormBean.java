@@ -16,7 +16,7 @@ import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 
 /**
- * A request scoped bean for using with the h:outputText example.
+ * A request scoped bean for the h:form example.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */

@@ -9,7 +9,7 @@
         <groupId>jakartaee.examples.jsf</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>inputFile</artifactId>
+    <artifactId>jsfInputFile</artifactId>
     <packaging>war</packaging>
     <name>A h:inputFile example</name>
     <dependencies>

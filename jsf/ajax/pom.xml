@@ -9,7 +9,7 @@
         <groupId>jakartaee.examples.jsf</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>ajax</artifactId>
+    <artifactId>jsfAjax</artifactId>
     <packaging>war</packaging>
     <name>A f:ajax example</name>
     <dependencies>

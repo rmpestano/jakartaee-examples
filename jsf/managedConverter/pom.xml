@@ -9,7 +9,7 @@
         <groupId>jakartaee.examples.jsf</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>managedConverter</artifactId>
+    <artifactId>jsfCdiManagedConverter</artifactId>
     <packaging>war</packaging>
     <name>A CDI managed converter example</name>
     <dependencies>

@@ -16,12 +16,12 @@
             show "Hello World" below and not "And you just submitted the form").
         </p>
         <br/>
-        <h:form>
-            <h:commandButton action="#{actionListenerBean.submit}" value="Submit">
-                <f:actionListener type="jakartaee.examples.jsf.actionListener.ActionListenerExample"/>
+        <h:form id="form">
+            <h:commandButton id="submit" action="#{actionListenerBean.submit}" value="Submit">
+                <f:actionListener type="jakartaee.examples.jsf.actionlistener.ActionListenerExample"/>
             </h:commandButton>
         </h:form>
         <br/>
-        <h:outputText value="#{actionListenerBean.outputText}"/>
+        "<h:outputText value="#{actionListenerBean.outputText}"/>"
     </h:body>
 </html>

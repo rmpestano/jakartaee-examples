@@ -9,7 +9,7 @@
         <groupId>jakartaee.examples.jsf</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>requestCookieMap</artifactId>
+    <artifactId>jsfRequestCookieMap</artifactId>
     <packaging>war</packaging>
     <name>An injected RequestCookieMap example</name>
     <dependencies>

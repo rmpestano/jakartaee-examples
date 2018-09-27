@@ -9,7 +9,7 @@
         <groupId>jakartaee.examples.jsf</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>initParameterMap</artifactId>
+    <artifactId>jsfInitParameterMap</artifactId>
     <packaging>war</packaging>
     <name>An injected InitParameterMap example</name>
     <dependencies>

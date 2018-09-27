@@ -9,7 +9,7 @@
         <groupId>jakartaee.examples.jsf</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>viewScoped</artifactId>
+    <artifactId>jsfViewScoped</artifactId>
     <packaging>war</packaging>
     <name>A ViewScoped bean example</name>
     <dependencies>

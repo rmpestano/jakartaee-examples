@@ -12,11 +12,11 @@
             As this example uses h:inputFile you will need to upload a file
             and then click submit to see it in action.
         </p>
-        <h:form enctype="multipart/form-data">
-            <h:inputFile value="#{inputFileBean.file}"/>
-            <h:commandButton value="Submit" action="#{inputFileBean.submit}"/>
+        <h:form id="form" enctype="multipart/form-data">
+            <h:inputFile id="file" value="#{inputFileBean.file}"/>
+            <h:commandButton id="submit" value="Submit" action="#{inputFileBean.submit}"/>
         </h:form>
         <br/>
-        File uploaded: <h:outputText value="#{inputFileBean.file}"/>
+        File uploaded has a size of "<h:outputText value="#{inputFileBean.file.size}"/>" bytes
     </h:body>
 </html>

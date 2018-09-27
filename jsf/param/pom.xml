@@ -9,7 +9,7 @@
         <groupId>jakartaee.examples.jsf</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>param</artifactId>
+    <artifactId>jsfParam</artifactId>
     <packaging>war</packaging>
     <name>A f:param example</name>
     <dependencies>

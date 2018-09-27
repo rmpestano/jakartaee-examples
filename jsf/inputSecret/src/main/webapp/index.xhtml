@@ -13,11 +13,11 @@
             which should not be visible until you submit it and get it echoed
             back to you.
         </p>
-        <h:form enctype="multipart/form-data">
-            <h:inputSecret value="#{inputSecretBean.secret}"/>
-            <h:commandButton value="Submit" action="#{inputSecretBean.submit}"/>
+        <h:form id="form">
+            <h:inputSecret id="input" value="#{inputSecretBean.secret}"/>
+            <h:commandButton id="submit" value="Submit" action="#{inputSecretBean.submit}"/>
         </h:form>
         <br/>
-        This was your secret text: <h:outputText value="#{inputSecretBean.secret}"/>
+        This was your secret text: "<h:outputText value="#{inputSecretBean.secret}"/>"
     </h:body>
 </html>

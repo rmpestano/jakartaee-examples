@@ -13,13 +13,13 @@
             This example demonstrates the use of a CDI managed converter. Enter
             a value of 0, 1 or 2 and see what it does.
         </p>
-        <h:form>
-            <h:inputText value="#{managedConverterBean.value}">
+        <h:form id="form">
+            <h:inputText id="inputText" value="#{managedConverterBean.value}">
                 <f:converter converterId="managedConverter"/>
             </h:inputText>
-            <h:commandButton value="Submit" action="#{managedConverterBean.submit}"/>
+            <h:commandButton id="submit" value="Submit" action="#{managedConverterBean.submit}"/>
         </h:form>
         <br/>
-        <h:outputText value="#{managedConverterBean.value}"/>
+        "<h:outputText value="#{managedConverterBean.value}"/>"
     </h:body>
 </html>

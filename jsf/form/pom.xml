@@ -9,7 +9,7 @@
         <groupId>jakartaee.examples.jsf</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>form</artifactId>
+    <artifactId>jsfForm</artifactId>
     <packaging>war</packaging>
     <name>A h:form example</name>
     <dependencies>

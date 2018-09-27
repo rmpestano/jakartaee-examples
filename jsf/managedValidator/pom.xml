@@ -9,7 +9,7 @@
         <groupId>jakartaee.examples.jsf</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>managedValidator</artifactId>
+    <artifactId>jsfCdiManagedValidator</artifactId>
     <packaging>war</packaging>
     <name>A CDI managed validator example</name>
     <dependencies>
