@@ -93,6 +93,6 @@ public class ManagedValidatorTest {
         HtmlSubmitInput submit = page.getHtmlElementById("form:submit");
         page = submit.click();
         content = page.asXml();
-        assertTrue(content.contains("The value should be: /"));
+        assertTrue(content.contains("The value should be:"));
     }
 }
