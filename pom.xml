@@ -130,6 +130,7 @@
         <module>jaxrs</module>
         <module>jpa</module>
         <module>jsf</module>
+        <module>jsp</module>
         <module>jsonb</module>
         <module>jsonp</module>
         <module>servlet</module>
