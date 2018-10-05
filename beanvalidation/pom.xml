@@ -17,11 +17,10 @@
         <module>min</module>
         <module>notNull</module>
         <module>size</module>
+        <module>nullAnnotation</module>
     </modules>
-    
     <dependencies>
         <dependency>
-            <!-- provides @JakartaEEServer arquillian annotation -->
              <groupId>jakartaee.examples</groupId>
              <artifactId>test-commons</artifactId>
              <version>${project.version}</version>
