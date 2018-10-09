@@ -1,3 +1,3 @@
-# A OneToOne annotation example
+# A JPA OneToMany annotation example
 
-This example demonstrates how to use the OneToOne annotation.
+This example demonstrates how to use the JPA OneToMany annotation.
