@@ -17,6 +17,7 @@
         <module>consumes</module>
         <module>defaultValue</module>
         <module>delete</module>
+        <module>formParam</module>
         <module>get</module>
         <module>getClient</module>
         <module>helloWorld</module>
@@ -27,10 +28,8 @@
         <module>put</module>
         <module>queryParam</module>
     </modules>
-    
     <dependencies>
         <dependency>
-            <!-- provides @JakartaEEServer arquillian annotation -->
              <groupId>jakartaee.examples</groupId>
              <artifactId>test-commons</artifactId>
              <version>${project.version}</version>
