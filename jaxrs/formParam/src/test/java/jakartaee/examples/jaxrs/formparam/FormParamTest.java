@@ -87,8 +87,7 @@ public class FormParamTest {
     @Test
     public void testDefaultValue() throws Exception {
         HtmlPage page = webClient.getPage(baseUrl + "index.html");
-        String content = page.asXml();
-        TextPage textPage = page.getElementByName("form:submitButton").click();
+        TextPage textPage = page.getElementByName("submitButton").click();
         assertTrue(textPage.getContent().contains("1234"));
     }
 }
