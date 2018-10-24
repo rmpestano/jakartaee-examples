@@ -11,7 +11,7 @@
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-package jakartaee.examples.jpa.tablePerConcreteClass;
+package jakartaee.examples.jpa.tablePerConcreteClassInheritance;
 
 import javax.persistence.ManyToOne;
 import javax.persistence.MappedSuperclass;

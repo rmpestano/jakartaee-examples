@@ -10,12 +10,10 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.jpa.tablePerConcreteClass;
+package jakartaee.examples.jpa.tablePerConcreteClassInheritance;
 
-import javax.persistence.AssociationOverride;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 
 /**
@@ -23,19 +21,27 @@ import javax.persistence.Table;
  * @author Seyed Mohammad Hossein Jamali (smhjamali@yahoo.com)
  */
 @Entity
-@Table(name = "PARTTIME_EMPLOYEE")
-@AssociationOverride(name = "manager", joinColumns=@JoinColumn(name = "MGR"))
-public class PartTimeEmployee extends CompanyEmployee {
+@Table(name = "FULLTIME_EMPLOYEE")
+public class FullTimeEmployee extends CompanyEmployee {
 
-    @Column(name = "HOURLY_RATE")
-    private Float hourlyRate;
+    private Long salary;
+    @Column(name = "PENSION")
+    private Long pensionContribution;
 
-    public Float getHourlyRate() {
-        return hourlyRate;
+    public Long getSalary() {
+        return salary;
     }
 
-    public void setHourlyRate(Float hourlyRate) {
-        this.hourlyRate = hourlyRate;
-    }        
+    public void setSalary(Long salary) {
+        this.salary = salary;
+    }
+
+    public Long getPensionContribution() {
+        return pensionContribution;
+    }
+
+    public void setPensionContribution(Long pensionContribution) {
+        this.pensionContribution = pensionContribution;
+    }       
     
 }

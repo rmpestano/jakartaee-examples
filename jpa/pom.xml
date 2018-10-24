@@ -22,8 +22,8 @@
         <module>persistenceUnit</module>
         <module>resultStream</module>
         <module>table</module>
-        <module>inheritence_singletable</module>
-    <module>inheritance_joined</module>
-    <module>tablePerConcreteClass</module>
+        <module>singleTableInheritance</module>
+        <module>joinedInheritance</module>
+        <module>tablePerConcreteClassInheritance</module>
   </modules>
 </project>

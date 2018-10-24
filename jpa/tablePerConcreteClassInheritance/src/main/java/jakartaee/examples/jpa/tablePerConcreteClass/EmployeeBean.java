@@ -10,7 +10,7 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.jpa.tablePerConcreteClass;
+package jakartaee.examples.jpa.tablePerConcreteClassInheritance;
 
 import java.util.List;
 import javax.ejb.EJB;

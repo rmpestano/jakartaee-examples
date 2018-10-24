@@ -10,13 +10,12 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
+package jakartaee.examples.jpa.tablePerConcreteClassInheritance;
 
-package jakartaee.examples.jpa.tablePerConcreteClass;
-
-import javax.persistence.AttributeOverride;
-import javax.persistence.AttributeOverrides;
+import javax.persistence.AssociationOverride;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 
 /**
@@ -24,31 +23,19 @@ import javax.persistence.Table;
  * @author Seyed Mohammad Hossein Jamali (smhjamali@yahoo.com)
  */
 @Entity
-@Table(name = "CONTRACT_EMPLOYEE")
-@AttributeOverrides({
-    @AttributeOverride(name = "name", column=@Column(name = "FULLNAME")),
-    @AttributeOverride(name = "startDate", column=@Column(name = "SDATE"))    
-})
-public class ContractEmployee extends Employee {
+@Table(name = "PARTTIME_EMPLOYEE")
+@AssociationOverride(name = "manager", joinColumns=@JoinColumn(name = "MGR"))
+public class PartTimeEmployee extends CompanyEmployee {
 
-    @Column(name = "DAILY_RATE")
-    private Integer dailyRate;
-    private Integer term;
+    @Column(name = "HOURLY_RATE")
+    private Float hourlyRate;
 
-    public Integer getDailyRate() {
-        return dailyRate;
+    public Float getHourlyRate() {
+        return hourlyRate;
     }
 
-    public void setDailyRate(Integer dailyRate) {
-        this.dailyRate = dailyRate;
-    }
-
-    public Integer getTerm() {
-        return term;
-    }
-
-    public void setTerm(Integer term) {
-        this.term = term;
-    }
-        
+    public void setHourlyRate(Float hourlyRate) {
+        this.hourlyRate = hourlyRate;
+    }        
+    
 }

@@ -8,12 +8,12 @@
   </parent>
 
     <groupId>jakartaee.examples.jpa</groupId>
-    <artifactId>inheritance_joined</artifactId>
+    <artifactId>tablePerConcreteClassInheritance</artifactId>
     <version>8-SNAPSHOT</version>
     <packaging>war</packaging>
-
-    <name>An @Inheritance example (Joined)</name>
-
+    
+    <name>An @Inheritance example (Table-per-Concrete-Class)</name>
+    
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,9 +22,10 @@
     <dependencies>
         <dependency>
             <groupId>javax</groupId>
-            <artifactId>javaee-web-api</artifactId>            
+            <artifactId>javaee-web-api</artifactId>
+            <version>7.0</version>
             <scope>provided</scope>
-        </dependency>     
+        </dependency>
     </dependencies>
 
     <build>

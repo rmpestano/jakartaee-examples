@@ -10,8 +10,11 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.jpa.tablePerConcreteClass;
 
+package jakartaee.examples.jpa.tablePerConcreteClassInheritance;
+
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -21,27 +24,31 @@ import javax.persistence.Table;
  * @author Seyed Mohammad Hossein Jamali (smhjamali@yahoo.com)
  */
 @Entity
-@Table(name = "FULLTIME_EMPLOYEE")
-public class FullTimeEmployee extends CompanyEmployee {
+@Table(name = "CONTRACT_EMPLOYEE")
+@AttributeOverrides({
+    @AttributeOverride(name = "name", column=@Column(name = "FULLNAME")),
+    @AttributeOverride(name = "startDate", column=@Column(name = "SDATE"))    
+})
+public class ContractEmployee extends Employee {
 
-    private Long salary;
-    @Column(name = "PENSION")
-    private Long pensionContribution;
+    @Column(name = "DAILY_RATE")
+    private Integer dailyRate;
+    private Integer term;
 
-    public Long getSalary() {
-        return salary;
+    public Integer getDailyRate() {
+        return dailyRate;
     }
 
-    public void setSalary(Long salary) {
-        this.salary = salary;
+    public void setDailyRate(Integer dailyRate) {
+        this.dailyRate = dailyRate;
     }
 
-    public Long getPensionContribution() {
-        return pensionContribution;
+    public Integer getTerm() {
+        return term;
     }
 
-    public void setPensionContribution(Long pensionContribution) {
-        this.pensionContribution = pensionContribution;
-    }       
-    
+    public void setTerm(Integer term) {
+        this.term = term;
+    }
+        
 }

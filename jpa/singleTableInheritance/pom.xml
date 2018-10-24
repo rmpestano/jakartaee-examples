@@ -8,11 +8,11 @@
   </parent>
 
     <groupId>jakartaee.examples.jpa</groupId>
-    <artifactId>inheritance_singletable</artifactId>
+    <artifactId>singleTableInheritance</artifactId>
     <version>8-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>An @Inheritance example (Single_Table)</name>
+    <name>An @Inheritance example (Single Table)</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
