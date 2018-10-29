@@ -31,6 +31,7 @@
         <module>managedProperty</module>
         <module>managedValidator</module>
         <module>outputLabel</module>
+        <module>outputStylesheet</module>
         <module>outputText</module>
         <module>param</module>
         <module>requestCookieMap</module>
