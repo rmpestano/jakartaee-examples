@@ -10,57 +10,33 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.jsonb.fromJsonToObject;
+package jakartaee.examples.jsonb.jsonbcreator;
 
-import java.util.List;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 import javax.json.bind.JsonbBuilder;
 
 /**
- * A request scoped bean for using with the JSON to Object example.
+ * The request scoped bean for the JSON-B @JsonbCreator example.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */
-@Named(value = "jsonToObjectBean")
+@Named
 @RequestScoped
-public class JsonToObjectBean {
+public class JsonbCreatorBean {
     
     /**
-     * Stores the JSON.
+     * Stores the output.
      */
-    private String json;
-    
-    /**
-     * Stores the list.
-     */
-    private List list;
+    private String output;
 
     /**
-     * Get the JSON.
+     * Get the output.
      * 
-     * @return the JSON.
+     * @return the output.
      */
-    public String getJson() {
-        return json;
-    }
-    
-    /**
-     * Get the list.
-     * 
-     * @return the list.
-     */
-    public List getList() {
-        return list;
-    }
-    
-    /**
-     * Set the JSON.
-     * 
-     * @param json the json.
-     */
-    public void setJson(String json) {
-        this.json = json;
+    public String getOutput() {
+        return output;
     }
     
     /**
@@ -70,7 +46,8 @@ public class JsonToObjectBean {
      */
     public String submit() {
         JsonbBuilder builder = JsonbBuilder.newBuilder();
-        list = builder.build().fromJson("[" + json + "]", List.class);
+        JsonbCreatorExample example = builder.build().fromJson("{\"integer\":\"1234\"}", JsonbCreatorExample.class);
+        output = String.valueOf(example.getInt());
         return "";
     }
 }

@@ -18,18 +18,17 @@
         <module>fromJsonToObject</module>
         <module>fromObjectToJson</module>
         <module>jsonbDateFormat</module>
+        <module>jsonbCreator</module>
         <module>jsonbProperty</module>
         <module>jsonbTransient</module>
         <module>nullValues</module>
     </modules>
-    
-     <dependencies>
+    <dependencies>
         <dependency>
-            <!-- provides @JakartaEEServer arquillian annotation -->
-             <groupId>jakartaee.examples</groupId>
-             <artifactId>test-commons</artifactId>
-             <version>${project.version}</version>
-             <scope>test</scope>
+            <groupId>jakartaee.examples</groupId>
+            <artifactId>test-commons</artifactId>
+            <version>${project.version}</version>
+            <scope>test</scope>
         </dependency>    
     </dependencies>   
 </project>
