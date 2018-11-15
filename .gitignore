@@ -3,4 +3,5 @@
 .settings
 .vscode
 nb-configuration.xml
+nbactions.xml
 target
