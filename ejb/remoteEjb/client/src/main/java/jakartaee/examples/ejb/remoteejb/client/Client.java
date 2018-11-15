@@ -40,6 +40,10 @@ public class Client {
             properties.put("org.omg.CORBA.ORBInitialHost", "localhost");
             properties.put("org.omg.CORBA.ORBInitialPort", "3700");
         }
+        /*
+         * Everything below this comment should not have to be changed if you
+         * are using a different application-client JAR than this example does.
+         */
         InitialContext initialContext = new InitialContext(properties);
         RemoteEjb ejb = (RemoteEjb) initialContext.lookup("java:global/remoteEjb/remoteEjbJar/remoteEjb");
         System.out.println(ejb.helloWorld());
