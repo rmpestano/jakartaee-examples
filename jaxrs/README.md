@@ -6,7 +6,7 @@
 4. [A @FormParam example](formParam/README.md)
 5. [A @GET example](get/README.md)
 6. [A GET client example](getClient/README.md)
-7. [A HelloWorld example](helloworld/README.md)
+7. [A HelloWorld example](helloWorld/README.md)
 8. [A @HttpMethod example](httpMethod/README.md)
 9. [A @PathParam example](pathParam/README.md)
 10. [A @POST example](post/README.md)
