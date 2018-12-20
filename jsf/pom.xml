@@ -19,6 +19,7 @@
         <module>applicationMap</module>
         <module>applicationScoped</module>
         <module>commandScript</module>
+        <module>csrf</module>
         <module>externalContext</module>
         <module>facesContext</module>
         <module>form</module>
