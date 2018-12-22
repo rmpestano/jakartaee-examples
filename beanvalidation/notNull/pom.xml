@@ -9,9 +9,9 @@
         <groupId>jakartaee.examples.beanvalidation</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>notNull</artifactId>
+    <artifactId>beanValidationNotNull</artifactId>
     <packaging>war</packaging>
-    <name>A @NotNull example</name>
+    <name>A BeanValidation @NotNull example</name>
     <dependencies>
         <dependency>
             <groupId>javax</groupId>

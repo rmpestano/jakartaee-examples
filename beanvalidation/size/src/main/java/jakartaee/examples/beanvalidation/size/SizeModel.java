@@ -15,7 +15,7 @@ package jakartaee.examples.beanvalidation.size;
 import javax.validation.constraints.Size;
 
 /**
- * The size model.
+ * The model class for the BeanValidation @Size example.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */

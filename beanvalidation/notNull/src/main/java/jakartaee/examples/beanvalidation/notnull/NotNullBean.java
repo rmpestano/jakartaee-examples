@@ -16,7 +16,7 @@ import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 
 /**
- * A request scoped bean for using with the @NotNull example.
+ * A request scoped bean for the BeanValidation @NotNull example.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */

@@ -15,7 +15,7 @@ package jakartaee.examples.beanvalidation.notnull;
 import javax.validation.constraints.NotNull;
 
 /**
- * The model for the @NotNull example.
+ * The model for the BeanValidation @NotNull example.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */

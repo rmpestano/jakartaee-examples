@@ -16,7 +16,7 @@ import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 
 /**
- * A request scoped bean for using with the h:inputText example.
+ * A request scoped bean for the BeanValidation @Size example.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */

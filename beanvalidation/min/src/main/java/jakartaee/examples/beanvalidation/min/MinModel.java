@@ -15,7 +15,7 @@ package jakartaee.examples.beanvalidation.min;
 import javax.validation.constraints.Min;
 
 /**
- * A model class for the Min annotation example.
+ * A model class for the BeanValidation @Min example.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */

@@ -15,7 +15,7 @@ package jakartaee.examples.beanvalidation.nullannotation;
 import javax.validation.constraints.Null;
 
 /**
- * The model for the @Null example.
+ * The model for the BeanValidation @Null example.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */

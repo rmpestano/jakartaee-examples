@@ -13,6 +13,8 @@
 package jakartaee.examples.beanvalidation.nullannotation;
 
 import com.gargoylesoftware.htmlunit.WebClient;
+import com.gargoylesoftware.htmlunit.html.HtmlInput;
+import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import jakartaee.examples.test.commons.JakartaEEServer;
 import org.arquillian.container.chameleon.runner.ArquillianChameleon;
 import java.io.File;
@@ -24,12 +26,14 @@ import org.jboss.arquillian.test.api.ArquillianResource;
 import static org.jboss.shrinkwrap.api.ShrinkWrap.create;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.After;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- * The JUnit tests for the @Null example.
+ * The JUnit tests for the BeanValidation @Null example.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */
@@ -78,21 +82,21 @@ public class NullBeanTest {
     }
 
     /**
-     * Test the Null annotation.
+     * Test the @Null.
      * 
      * @throws Exception when a serious error occurs.
      */
     @RunAsClient
     @Test
-    public void testNullBean() throws Exception {
-//        HtmlPage page = webClient.getPage(baseUrl + "index.xhtml");
-//        String content = page.asXml();
-//        assertTrue(content.contains("This example demonstrates the use of @Null"));
-//        page = page.getElementByName("form:submitButton").click();
-//        assertFalse(page.asXml().contains("This must be null"));
-//        HtmlInput inputText = (HtmlInput) page.getElementByName("form:inputText");
-//        inputText.setValueAttribute("123");
-//        page = page.getElementByName("form:submitButton").click();
-//        assertTrue(page.asXml().contains("This must be null"));
+    public void testNull() throws Exception {
+        HtmlPage page = webClient.getPage(baseUrl + "index.xhtml");
+        String content = page.asXml();
+        assertTrue(content.contains("This example demonstrates the use of @Null"));
+        page = page.getElementByName("form:submitButton").click();
+        assertFalse(page.asXml().contains("This must be null"));
+        HtmlInput inputText = (HtmlInput) page.getElementByName("form:inputText");
+        inputText.setValueAttribute("123");
+        page = page.getElementByName("form:submitButton").click();
+        assertTrue(page.asXml().contains("This must be null"));
     }
 }

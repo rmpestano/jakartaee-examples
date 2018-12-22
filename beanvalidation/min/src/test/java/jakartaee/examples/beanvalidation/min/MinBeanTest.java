@@ -33,7 +33,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- * The JUnit tests for the Min annotation example.
+ * The JUnit tests for the BeanValidation @Min example.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */
@@ -82,13 +82,13 @@ public class MinBeanTest {
     }
 
     /**
-     * Test the Size annotation.
+     * Test the @Min.
      * 
      * @throws Exception when a serious error occurs.
      */
     @RunAsClient
     @Test
-    public void testSizeBean() throws Exception {
+    public void testMin() throws Exception {
         HtmlPage page = webClient.getPage(baseUrl + "index.xhtml");
         String content = page.asXml();
         assertTrue(content.contains("This example demonstrates the use of @Min"));

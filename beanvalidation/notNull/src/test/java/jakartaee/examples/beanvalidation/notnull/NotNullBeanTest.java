@@ -1,5 +1,3 @@
-package jakartaee.examples.beanvalidation.notnull;
-
 /*
  * Permission to use, copy, modify, and/or distribute this software for any 
  * purpose with or without fee is hereby granted.
@@ -12,7 +10,7 @@ package jakartaee.examples.beanvalidation.notnull;
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-
+package jakartaee.examples.beanvalidation.notnull;
 
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlInput;
@@ -35,7 +33,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- * The JUnit tests for the @NotNull example.
+ * The JUnit tests for the BeanValidation @NotNull example.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */
@@ -84,13 +82,13 @@ public class NotNullBeanTest {
     }
 
     /**
-     * Test the Size annotation.
+     * Test the @NotNull.
      * 
      * @throws Exception when a serious error occurs.
      */
     @RunAsClient
     @Test
-    public void testNotNullBean() throws Exception {
+    public void testNotNull() throws Exception {
         HtmlPage page = webClient.getPage(baseUrl + "index.xhtml");
         String content = page.asXml();
         assertTrue(content.contains("This example demonstrates the use of @NotNull"));

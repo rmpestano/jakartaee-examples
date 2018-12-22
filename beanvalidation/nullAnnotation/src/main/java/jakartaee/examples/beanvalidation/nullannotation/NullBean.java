@@ -16,7 +16,7 @@ import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 
 /**
- * A request scoped bean for the @Null example.
+ * A request scoped bean for the BenValidation @Null example.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */

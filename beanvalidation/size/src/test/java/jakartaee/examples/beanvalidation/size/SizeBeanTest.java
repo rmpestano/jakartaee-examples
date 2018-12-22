@@ -1,5 +1,3 @@
-package jakartaee.examples.beanvalidation.size;
-
 /*
  * Permission to use, copy, modify, and/or distribute this software for any 
  * purpose with or without fee is hereby granted.
@@ -12,7 +10,7 @@ package jakartaee.examples.beanvalidation.size;
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-
+package jakartaee.examples.beanvalidation.size;
 
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlInput;
@@ -21,7 +19,6 @@ import jakartaee.examples.test.commons.JakartaEEServer;
 import java.io.File;
 import java.net.URL;
 import javax.faces.webapp.FacesServlet;
-
 import org.arquillian.container.chameleon.runner.ArquillianChameleon;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.container.test.api.RunAsClient;
@@ -36,7 +33,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- * The JUnit tests for the WebServletServlet class.
+ * The JUnit tests for the BeanValidation @Size example.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */
@@ -85,13 +82,13 @@ public class SizeBeanTest {
     }
 
     /**
-     * Test the Size annotation.
+     * Test the @Size.
      * 
      * @throws Exception when a serious error occurs.
      */
     @RunAsClient
     @Test
-    public void testSizeBean() throws Exception {
+    public void testSize() throws Exception {
         HtmlPage page = webClient.getPage(baseUrl + "index.xhtml");
         String content = page.asXml();
         assertTrue(content.contains("This example demonstrates the use of @Size"));

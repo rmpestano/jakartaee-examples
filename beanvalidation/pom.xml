@@ -16,8 +16,8 @@
     <modules>
         <module>min</module>
         <module>notNull</module>
-        <module>size</module>
         <module>nullAnnotation</module>
+        <module>size</module>
     </modules>
     <dependencies>
         <dependency>
