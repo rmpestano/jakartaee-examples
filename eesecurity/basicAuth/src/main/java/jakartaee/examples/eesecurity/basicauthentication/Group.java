@@ -10,7 +10,7 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.eesecurity.filter;
+package jakartaee.examples.eesecurity.basicauthentication;
 
 import java.io.Serializable;
 import java.math.BigInteger;
@@ -20,30 +20,32 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * A User.
+ * A group.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */
 @Entity
-@Table(name = "eesecurity_filter_user")
-public class User implements Serializable {
+@Table(name = "basic_auth_group")
+public class Group implements Serializable {
 
     /**
      * Stores the id.
      */
+
+    @Column(name = "id")
     @Id
     private BigInteger id;
     
     /**
      * Stores the password.
      */
-    @Column(name = "password")
-    private String password;
+    @Column(name = "name")
+    private String name;
     
     /**
      * Stores the username.
      */
-    @Column(name = "username", unique = true)
+    @Column(name = "username")
     private String username;
 
     /**
@@ -56,12 +58,12 @@ public class User implements Serializable {
     }
     
     /**
-     * Get the password.
+     * Get the name.
      * 
-     * @return the password.
+     * @return the name.
      */
-    public String getPassword() {
-        return password;
+    public String getName() {
+        return name;
     }
     
     /**
@@ -83,12 +85,12 @@ public class User implements Serializable {
     }
     
     /**
-     * Set the password.
+     * Set the name.
      * 
-     * @param password the password.
+     * @param name the name.
      */
-    public void setPassword(String password) {
-        this.password = password;
+    public void setName(String name) {
+        this.name = name;
     }
     
     /**

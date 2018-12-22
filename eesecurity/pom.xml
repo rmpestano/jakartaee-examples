@@ -9,7 +9,7 @@
         <artifactId>project</artifactId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <groupId>jakartaee.examples.soteria</groupId>
+    <groupId>jakartaee.examples.eesecurity</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
     <name>EE Security Examples</name>

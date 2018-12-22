@@ -10,7 +10,7 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.eesecurity.filter;
+package jakartaee.examples.eesecurity.servlet;
 
 import java.io.Serializable;
 import javax.enterprise.context.ApplicationScoped;
@@ -24,8 +24,8 @@ import javax.security.enterprise.identitystore.Pbkdf2PasswordHash;
 @BasicAuthenticationMechanismDefinition(realmName = "basicAuth")
 @DatabaseIdentityStoreDefinition(
         dataSourceLookup = "java:comp/DefaultDataSource",
-        callerQuery = "select password from eesecurity_filter_user where username = ?",
-        groupsQuery = "select name from eesecurity_filter_group where username = ?",
+        callerQuery = "select password from eesecurity_servlet_user where username = ?",
+        groupsQuery = "select name from eesecurity_servlet_group where username = ?",
         hashAlgorithm = Pbkdf2PasswordHash.class,
         hashAlgorithmParameters = {
             "Pbkdf2PasswordHash.Iterations=3072",

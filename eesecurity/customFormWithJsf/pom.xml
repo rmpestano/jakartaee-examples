@@ -6,12 +6,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>project</artifactId>
-        <groupId>jakartaee.examples.soteria</groupId>
+        <groupId>jakartaee.examples.eesecurity</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>customFormWithJsf</artifactId>
+    <artifactId>eeSecurityCustomFormWithJsf</artifactId>
     <packaging>war</packaging>
-    <name>A Custom Form with JSF example</name>
+    <name>An EE Security Custom Form with JSF example</name>
     <dependencies>
         <dependency>
             <groupId>javax</groupId>

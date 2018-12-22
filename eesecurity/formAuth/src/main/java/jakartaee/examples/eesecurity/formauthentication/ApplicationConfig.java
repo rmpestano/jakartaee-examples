@@ -10,22 +10,27 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.eesecurity.filter;
+package jakartaee.examples.eesecurity.formauthentication;
 
 import java.io.Serializable;
 import javax.enterprise.context.ApplicationScoped;
 import javax.faces.annotation.FacesConfig;
 import javax.inject.Named;
-import javax.security.enterprise.authentication.mechanism.http.BasicAuthenticationMechanismDefinition;
+import javax.security.enterprise.authentication.mechanism.http.FormAuthenticationMechanismDefinition;
+import javax.security.enterprise.authentication.mechanism.http.LoginToContinue;
 import javax.security.enterprise.identitystore.DatabaseIdentityStoreDefinition;
 import javax.security.enterprise.identitystore.Pbkdf2PasswordHash;
 
 @ApplicationScoped
-@BasicAuthenticationMechanismDefinition(realmName = "basicAuth")
+@FormAuthenticationMechanismDefinition(
+        loginToContinue = @LoginToContinue(
+                errorPage = "/login_error.xhtml",
+                loginPage = "/login.xhtml")
+)
 @DatabaseIdentityStoreDefinition(
         dataSourceLookup = "java:comp/DefaultDataSource",
-        callerQuery = "select password from eesecurity_filter_user where username = ?",
-        groupsQuery = "select name from eesecurity_filter_group where username = ?",
+        callerQuery = "select password from form_auth_user where username = ?",
+        groupsQuery = "select name from form_auth_group where username = ?",
         hashAlgorithm = Pbkdf2PasswordHash.class,
         hashAlgorithmParameters = {
             "Pbkdf2PasswordHash.Iterations=3072",

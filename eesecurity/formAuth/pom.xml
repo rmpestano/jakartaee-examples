@@ -6,12 +6,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>project</artifactId>
-        <groupId>jakartaee.examples.soteria</groupId>
+        <groupId>jakartaee.examples.eesecurity</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
     <artifactId>formAuth</artifactId>
     <packaging>war</packaging>
-    <name>A FORM Authentication example</name>
+    <name>An EE Security FORM Authentication example</name>
     <dependencies>
         <dependency>
             <groupId>javax</groupId>

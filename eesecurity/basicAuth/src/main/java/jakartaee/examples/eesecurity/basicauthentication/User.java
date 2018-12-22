@@ -10,7 +10,7 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.eesecurity.filter;
+package jakartaee.examples.eesecurity.basicauthentication;
 
 import java.io.Serializable;
 import java.math.BigInteger;
@@ -25,7 +25,7 @@ import javax.persistence.Table;
  * @author Manfred Riem (mriem@manorrock.com)
  */
 @Entity
-@Table(name = "eesecurity_filter_user")
+@Table(name = "basic_auth_user")
 public class User implements Serializable {
 
     /**

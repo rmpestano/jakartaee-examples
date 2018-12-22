@@ -6,12 +6,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>project</artifactId>
-        <groupId>jakartaee.examples.soteria</groupId>
+        <groupId>jakartaee.examples.eesecurity</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>soteriaFilter</artifactId>
+    <artifactId>eeSecurityFilter</artifactId>
     <packaging>war</packaging>
-    <name>A Filter example</name>
+    <name>An EE Security Filter example</name>
     <dependencies>
         <dependency>
             <groupId>javax</groupId>

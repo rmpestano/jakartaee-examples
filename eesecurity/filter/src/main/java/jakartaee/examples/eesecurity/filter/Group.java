@@ -25,7 +25,7 @@ import javax.persistence.Table;
  * @author Manfred Riem (mriem@manorrock.com)
  */
 @Entity
-@Table(name = "soteria_filter_group")
+@Table(name = "eesecurity_filter_group")
 public class Group implements Serializable {
 
     /**
