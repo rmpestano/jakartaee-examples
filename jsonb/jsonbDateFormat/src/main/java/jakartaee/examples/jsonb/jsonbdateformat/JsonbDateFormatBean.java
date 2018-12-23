@@ -13,6 +13,7 @@
 package jakartaee.examples.jsonb.jsonbdateformat;
 
 import java.util.Calendar;
+import java.util.TimeZone;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 import javax.json.bind.JsonbBuilder;
@@ -48,7 +49,7 @@ public class JsonbDateFormatBean {
     public String submit() {
         JsonbBuilder builder = JsonbBuilder.newBuilder();
         JsonbDateFormatExample example = new JsonbDateFormatExample();
-        Calendar calendar = Calendar.getInstance();
+        Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("MST"));
         calendar.set(2001, 8, 11);
         example.setDate(calendar.getTime());
         output = builder.build().toJson(example);
