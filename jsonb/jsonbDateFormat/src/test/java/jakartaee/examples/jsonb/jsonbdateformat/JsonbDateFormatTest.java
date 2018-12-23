@@ -88,7 +88,6 @@ public class JsonbDateFormatTest {
     public void testJsonbDateFormat() throws Exception {
         HtmlPage page = webClient.getPage(baseUrl + "index.xhtml");
         page = page.getElementByName("form:submitButton").click();
-        System.out.println(page.asXml());
         assertTrue(page.asXml().contains("09/11/2001"));
     }
 }
