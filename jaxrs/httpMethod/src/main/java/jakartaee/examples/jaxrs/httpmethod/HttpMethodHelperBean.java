@@ -24,7 +24,7 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 
 /**
- * A request scoped bean to submit to a @HttpMethod bean.
+ * The request scoped bean to submit to a @HttpMethod resource.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */

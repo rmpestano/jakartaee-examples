@@ -18,7 +18,7 @@ import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
 /**
- * The application for the @POST example.
+ * The application for the JAX-RS @POST example.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */
@@ -33,7 +33,7 @@ public class PostApplication extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         HashSet classes = new HashSet();
-        classes.add(PostBean.class);
+        classes.add(PostResource.class);
         return classes;
     }
 }

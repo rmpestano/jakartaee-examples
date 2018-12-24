@@ -10,34 +10,33 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.jaxrs.pathparam;
+package jakartaee.examples.jaxrs.consumes;
 
+import javax.json.JsonObject;
 import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 /**
- * A JAX-RS bean for use with @GET example.
+ * The resource for the JAX-RS @Consumes example.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */
-@Path("pathParam")
-public class PathParamBean {
+@Path("consumes")
+public class ConsumesResource {
 
     /**
-     * Path param method.
+     * Consumes method.
      *
-     * @param pathParam the path parameter.
-     * @return the value of the path parameter.
+     * @param body the body we sent over (in application/json).
+     * @return the body (in text/plain)
      */
-    @GET
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    @PUT
+    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
-    @Path("{pathParam}")
-    public String pathParam(@PathParam("pathParam") String pathParam) {
-        return pathParam;
+    public String consumes(JsonObject body) {
+        return body.getString("string");
     }
 }

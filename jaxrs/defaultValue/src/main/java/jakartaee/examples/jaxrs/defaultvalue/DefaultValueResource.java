@@ -10,25 +10,34 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.jaxrs.httpmethod;
+package jakartaee.examples.jaxrs.defaultvalue;
 
+import javax.ws.rs.Consumes;
+import javax.ws.rs.DefaultValue;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.MediaType;
 
 /**
- * A JAX-RS bean for use with @HttpMethod example.
+ * The resource for the JAX-RS @DefaultValue example.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */
-@Path("httpmethod")
-public class HttpMethodBean {
+@Path("defaultValue")
+public class DefaultValueResource {
 
     /**
-     * HttpMethod method.
-     *
-     * @return "And we accepted a MYWAY call"
+     * defaultValue method.
+     * 
+     * @param queryParam the query parameter.
+     * @return the value of the query parameter.
      */
-    @MYWAY
-    public String httpMethod() {
-        return "And we accepted a MYWAY call";
+    @POST
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    @Produces(MediaType.TEXT_PLAIN)
+    public String defaultValue(@DefaultValue("defaultValue") @QueryParam("myparam") String queryParam) {
+        return queryParam;
     }
 }

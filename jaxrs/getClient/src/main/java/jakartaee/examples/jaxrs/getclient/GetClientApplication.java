@@ -33,7 +33,7 @@ public class GetClientApplication extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         HashSet classes = new HashSet();
-        classes.add(GetClientBean.class);
+        classes.add(GetClientResource.class);
         return classes;
     }
 }

@@ -66,7 +66,7 @@ public class GetClientTest {
     @Deployment
     public static WebArchive createDeployment() {
         return create(WebArchive.class).
-                addClasses(GetClientApplication.class, GetClientBean.class).
+                addClasses(GetClientApplication.class, GetClientResource.class).
                 addAsWebResource(new File("src/main/webapp/index.html"));
     }
 

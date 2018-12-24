@@ -10,31 +10,30 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.jaxrs.getclient;
+package jakartaee.examples.jaxrs.helloworld;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
+import java.util.HashSet;
+import java.util.Set;
+import javax.ws.rs.ApplicationPath;
+import javax.ws.rs.core.Application;
 
 /**
- * The JAX-RS bean for the GET Client example.
- *
+ * A request scoped bean for the JAX-RS HelloWorld example.
+ * 
  * @author Manfred Riem (mriem@manorrock.com)
  */
-@Path("getClient")
-public class GetClientBean {
+@ApplicationPath("rest")
+public class HelloWorldApplication extends Application {
 
     /**
-     * Get method.
-     *
-     * @return "And we used @GET"
+     * Get the classes.
+     * 
+     * @return the classes.
      */
-    @GET
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    @Produces(MediaType.TEXT_PLAIN)
-    public String get() {
-        return "And we used @GET";
+    @Override
+    public Set<Class<?>> getClasses() {
+        HashSet classes = new HashSet();
+        classes.add(HelloWorldResource.class);
+        return classes;
     }
 }

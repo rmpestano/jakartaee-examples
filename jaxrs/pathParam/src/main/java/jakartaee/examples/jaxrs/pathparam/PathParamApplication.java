@@ -18,7 +18,7 @@ import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
 /**
- * The application for the @PathParam example.
+ * The application for the JAX-RS @PathParam example.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */
@@ -33,7 +33,7 @@ public class PathParamApplication extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         HashSet classes = new HashSet();
-        classes.add(PathParamBean.class);
+        classes.add(PathParamResource.class);
         return classes;
     }
 }

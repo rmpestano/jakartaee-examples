@@ -9,9 +9,9 @@
         <groupId>jakartaee.examples.jaxrs</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>defaultValue</artifactId>
+    <artifactId>jaxrsDefaultValue</artifactId>
     <packaging>war</packaging>
-    <name>A @DefaultValue example</name>
+    <name>A JAX-RS @DefaultValue example</name>
     <dependencies>
         <dependency>
             <groupId>javax</groupId>

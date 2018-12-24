@@ -10,31 +10,25 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.jaxrs.get;
+package jakartaee.examples.jaxrs.httpmethod;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
 
 /**
- * A JAX-RS bean for use with @GET example.
+ * The JAX-RS resource for the @HttpMethod example.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */
-@Path("get")
-public class GetBean {
+@Path("httpmethod")
+public class HttpMethodResource {
 
     /**
-     * Get method.
+     * HttpMethod method.
      *
-     * @return "And we used @GET"
+     * @return "And we accepted a MYWAY call"
      */
-    @GET
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    @Produces(MediaType.TEXT_PLAIN)
-    public String get() {
-        return "And we used @GET";
+    @MYWAY
+    public String httpMethod() {
+        return "And we accepted a MYWAY call";
     }
 }

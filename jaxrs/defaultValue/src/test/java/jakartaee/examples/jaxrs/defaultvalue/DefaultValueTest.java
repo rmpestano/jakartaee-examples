@@ -31,7 +31,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- * The JUnit tests for the DefaultValueBean class.
+ * The JUnit tests for the DefaultValueResource class.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */
@@ -66,7 +66,7 @@ public class DefaultValueTest {
     @Deployment
     public static WebArchive createDeployment() {
         return create(WebArchive.class).
-                addClasses(DefaultValueApplication.class, DefaultValueBean.class).
+                addClasses(DefaultValueApplication.class, DefaultValueResource.class).
                 addAsWebResource(new File("src/main/webapp/index.html"));
     }
 
@@ -79,7 +79,7 @@ public class DefaultValueTest {
     }
 
     /**
-     * Test the DefaultValue annotation.
+     * Test @DefaultValue.
      * 
      * @throws Exception when a serious error occurs.
      */

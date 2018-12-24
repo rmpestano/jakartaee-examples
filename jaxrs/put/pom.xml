@@ -9,9 +9,9 @@
         <groupId>jakartaee.examples.jaxrs</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>put</artifactId>
+    <artifactId>jaxrsPut</artifactId>
     <packaging>war</packaging>
-    <name>A @PUT example</name>
+    <name>A JAX-RS @PUT example</name>
     <dependencies>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>

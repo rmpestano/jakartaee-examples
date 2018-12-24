@@ -9,9 +9,9 @@
         <groupId>jakartaee.examples.jaxrs</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>httpMethod</artifactId>
+    <artifactId>jaxrsHttpMethod</artifactId>
     <packaging>war</packaging>
-    <name>A @HttpMethod example</name>
+    <name>A JAX-RS @HttpMethod example</name>
     <dependencies>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>

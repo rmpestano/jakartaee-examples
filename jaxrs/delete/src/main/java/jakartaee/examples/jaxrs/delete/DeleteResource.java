@@ -10,31 +10,31 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.jaxrs.post;
+package jakartaee.examples.jaxrs.delete;
 
 import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 /**
- * A JAX-RS bean for use with @POST example.
+ * The resource for the JAX-RS @DELETE example.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */
-@Path("post")
-public class PostBean {
+@Path("delete")
+public class DeleteResource {
 
     /**
-     * Post method.
+     * Delete method.
      *
-     * @return "And we used @POST"
+     * @return "And there is nothing left!T"
      */
-    @POST
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    @DELETE
+    @Consumes(MediaType.TEXT_PLAIN)
     @Produces(MediaType.TEXT_PLAIN)
-    public String post() {
-        return "And we used @POST";
+    public String delete() {
+        return "And there is nothing left!";
     }
 }

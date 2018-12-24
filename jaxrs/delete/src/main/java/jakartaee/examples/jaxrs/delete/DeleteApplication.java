@@ -18,7 +18,7 @@ import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
 /**
- * The application for the @DELETE example.
+ * The application for the JAX-RS @DELETE example.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */
@@ -33,7 +33,7 @@ public class DeleteApplication extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         HashSet classes = new HashSet();
-        classes.add(DeleteBean.class);
+        classes.add(DeleteResource.class);
         return classes;
     }
 }

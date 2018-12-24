@@ -9,9 +9,9 @@
         <groupId>jakartaee.examples.jaxrs</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>post</artifactId>
+    <artifactId>jaxrsPost</artifactId>
     <packaging>war</packaging>
-    <name>A @POST example</name>
+    <name>A JAX-RS @POST example</name>
     <dependencies>
         <dependency>
             <groupId>javax</groupId>

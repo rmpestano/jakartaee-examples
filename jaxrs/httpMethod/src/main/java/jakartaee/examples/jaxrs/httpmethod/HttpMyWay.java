@@ -16,7 +16,7 @@ import java.net.URI;
 import org.apache.http.client.methods.HttpRequestBase;
 
 /**
- * A custom MYWAY HTTP method.
+ * The custom MYWAY HTTP method.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */

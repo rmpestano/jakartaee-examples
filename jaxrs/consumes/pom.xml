@@ -9,9 +9,9 @@
         <groupId>jakartaee.examples.jaxrs</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>consumes</artifactId>
+    <artifactId>jaxrsConsumes</artifactId>
     <packaging>war</packaging>
-    <name>A @Consumes example</name>
+    <name>A JAX-RS @Consumes example</name>
     <dependencies>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>

@@ -27,7 +27,7 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
 /**
- * A request scoped bean to submit to @DELETE bean.
+ * The request scoped bean to submit to the JAX-RS @DELETE resource.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */

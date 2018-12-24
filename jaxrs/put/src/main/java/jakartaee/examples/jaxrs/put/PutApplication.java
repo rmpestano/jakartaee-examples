@@ -18,7 +18,7 @@ import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
 /**
- * The application for the @PUT example.
+ * The application for the JAX-RS @PUT example.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */
@@ -33,7 +33,7 @@ public class PutApplication extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         HashSet classes = new HashSet();
-        classes.add(PutBean.class);
+        classes.add(PutResource.class);
         return classes;
     }
 }

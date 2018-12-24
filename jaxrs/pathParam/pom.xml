@@ -9,9 +9,9 @@
         <groupId>jakartaee.examples.jaxrs</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>pathParam</artifactId>
+    <artifactId>jaxrsPathParam</artifactId>
     <packaging>war</packaging>
-    <name>A @PathParam example</name>
+    <name>A JAX-RS @PathParam example</name>
     <dependencies>
         <dependency>
             <groupId>javax</groupId>

@@ -10,33 +10,31 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.jaxrs.consumes;
+package jakartaee.examples.jaxrs.post;
 
-import javax.json.JsonObject;
 import javax.ws.rs.Consumes;
-import javax.ws.rs.PUT;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 /**
- * A JAX-RS bean for use with @Consumes example.
+ * The resource for the JAX-RS @POST example.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */
-@Path("consumes")
-public class ConsumesBean {
+@Path("post")
+public class PostResource {
 
     /**
-     * Consumes method.
+     * Post method.
      *
-     * @param body the body we sent over (in application/json).
-     * @return the body (in text/plain)
+     * @return "And we used @POST"
      */
-    @PUT
-    @Consumes(MediaType.APPLICATION_JSON)
+    @POST
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Produces(MediaType.TEXT_PLAIN)
-    public String consumes(JsonObject body) {
-        return body.getString("string");
+    public String post() {
+        return "And we used @POST";
     }
 }

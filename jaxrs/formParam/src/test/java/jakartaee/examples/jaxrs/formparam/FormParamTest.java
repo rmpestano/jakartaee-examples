@@ -66,7 +66,7 @@ public class FormParamTest {
     @Deployment
     public static WebArchive createDeployment() {
         return create(WebArchive.class).
-                addClasses(FormParamApplication.class, FormParamBean.class).
+                addClasses(FormParamApplication.class, FormParamResource.class).
                 addAsWebResource(new File("src/main/webapp/index.html"));
     }
 
@@ -79,13 +79,13 @@ public class FormParamTest {
     }
 
     /**
-     * Test the DefaultValue annotation.
+     * Test @FormParam.
      * 
      * @throws Exception when a serious error occurs.
      */
     @RunAsClient
     @Test
-    public void testDefaultValue() throws Exception {
+    public void testFormParam() throws Exception {
         HtmlPage page = webClient.getPage(baseUrl + "index.html");
         TextPage textPage = page.getElementByName("submitButton").click();
         assertTrue(textPage.getContent().contains("1234"));

@@ -10,31 +10,33 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.jaxrs.delete;
+package jakartaee.examples.jaxrs.formparam;
 
 import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
+import javax.ws.rs.FormParam;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 /**
- * A JAX-RS bean for use with @DELETE example.
+ * The resource for the JAX-RS @FormParam example.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */
-@Path("delete")
-public class DeleteBean {
+@Path("formParam")
+public class FormParamResource {
 
     /**
-     * Delete method.
-     *
-     * @return "And there is nothing left!T"
+     * Form param method.
+     * 
+     * @param formParam the form parameter.
+     * @return the value of the form parameter.
      */
-    @DELETE
-    @Consumes(MediaType.TEXT_PLAIN)
+    @POST
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Produces(MediaType.TEXT_PLAIN)
-    public String delete() {
-        return "And there is nothing left!";
+    public String formParam(@FormParam("formParam") String formParam) {
+        return formParam;
     }
 }

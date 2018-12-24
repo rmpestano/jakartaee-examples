@@ -10,31 +10,29 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.jaxrs.put;
+package jakartaee.examples.jaxrs.helloworld;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.PUT;
+import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 /**
- * A JAX-RS bean for use with @PUT example.
+ * The resource for the JAX-RS HelloWorld example.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */
-@Path("put")
-public class PutBean {
+@Path("helloWorld")
+public class HelloWorldResource {
 
     /**
-     * Put method.
+     * Hello World method.
      *
-     * @return "And we used @PUT"
+     * @return "Hello World"
      */
-    @PUT
-    @Consumes(MediaType.TEXT_PLAIN)
+    @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String put() {
-        return "And we used @PUT";
+    public String helloWorld() {
+        return "Hello World";
     }
 }

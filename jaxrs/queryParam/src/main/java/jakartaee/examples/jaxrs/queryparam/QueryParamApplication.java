@@ -18,7 +18,7 @@ import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
 /**
- * The application for the @QueryParam example.
+ * The application for the JAX-RS @QueryParam example.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */
@@ -33,7 +33,7 @@ public class QueryParamApplication extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         HashSet classes = new HashSet();
-        classes.add(QueryParamBean.class);
+        classes.add(QueryParamResource.class);
         return classes;
     }
 }

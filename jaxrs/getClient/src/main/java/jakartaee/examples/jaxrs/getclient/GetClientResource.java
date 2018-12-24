@@ -10,33 +10,31 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.jaxrs.formparam;
+package jakartaee.examples.jaxrs.getclient;
 
 import javax.ws.rs.Consumes;
-import javax.ws.rs.FormParam;
-import javax.ws.rs.POST;
+import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 /**
- * A JAX-RS bean for use with the @FormParam example.
+ * The resource for the GET Client example.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */
-@Path("formParam")
-public class FormParamBean {
+@Path("getClient")
+public class GetClientResource {
 
     /**
-     * Form param method.
-     * 
-     * @param formParam the form parameter.
-     * @return the value of the form parameter.
+     * Get method.
+     *
+     * @return "And we used @GET"
      */
-    @POST
+    @GET
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Produces(MediaType.TEXT_PLAIN)
-    public String formParam(@FormParam("formParam") String formParam) {
-        return formParam;
+    public String get() {
+        return "And we used @GET";
     }
 }

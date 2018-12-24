@@ -9,9 +9,9 @@
         <groupId>jakartaee.examples.jaxrs</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>formParam</artifactId>
+    <artifactId>jaxrsFormParam</artifactId>
     <packaging>war</packaging>
-    <name>A @FormParam example</name>
+    <name>A JAX-RS @FormParam example</name>
     <dependencies>
         <dependency>
             <groupId>javax</groupId>

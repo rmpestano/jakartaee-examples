@@ -9,9 +9,9 @@
         <groupId>jakartaee.examples.jaxrs</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>delete</artifactId>
+    <artifactId>jaxrsDelete</artifactId>
     <packaging>war</packaging>
-    <name>A @DELETE example</name>
+    <name>A JAX-RS @DELETE example</name>
     <dependencies>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>

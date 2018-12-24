@@ -20,7 +20,7 @@ import java.lang.annotation.Target;
 import javax.ws.rs.HttpMethod;
 
 /**
- * The MYWAY REST annotation.
+ * The MYWAY annotation.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */

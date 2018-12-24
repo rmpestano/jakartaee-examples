@@ -28,7 +28,7 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
 /**
- * A request scoped bean to submit to @PUT bean.
+ * A request scoped bean to submit to JAX-RS @PUT resource.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */

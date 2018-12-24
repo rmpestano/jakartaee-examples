@@ -11,7 +11,7 @@
     </parent>
     <artifactId>jaxrsGetClient</artifactId>
     <packaging>war</packaging>
-    <name>A GET Client example</name>
+    <name>A JAX-RS GET Client example</name>
     <dependencies>
         <dependency>
             <groupId>javax</groupId>

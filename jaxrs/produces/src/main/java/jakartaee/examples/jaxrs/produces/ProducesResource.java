@@ -10,30 +10,31 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.jaxrs.helloWorld;
+package jakartaee.examples.jaxrs.produces;
 
-import java.util.HashSet;
-import java.util.Set;
-import javax.ws.rs.ApplicationPath;
-import javax.ws.rs.core.Application;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 /**
- * A request scoped bean for use with the HelloWorld example.
- * 
+ * The resource for the @Produces example.
+ *
  * @author Manfred Riem (mriem@manorrock.com)
  */
-@ApplicationPath("rest")
-public class HelloWorldApplication extends Application {
+@Path("produces")
+public class ProducesResource {
 
     /**
-     * Get the classes.
-     * 
-     * @return the classes.
+     * Produces method.
+     *
+     * @return 'And we are returning an array of strings in JSON format'
      */
-    @Override
-    public Set<Class<?>> getClasses() {
-        HashSet classes = new HashSet();
-        classes.add(HelloWorldBean.class);
-        return classes;
+    @GET
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    @Produces(MediaType.APPLICATION_JSON)
+    public String[] produces() {
+        return new String[]{"And", "we", "are", "returning", "an", "array", "of", "strings", "in", "JSON", "format"};
     }
 }
