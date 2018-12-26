@@ -9,9 +9,9 @@
         <groupId>jakartaee.examples.servlet</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>httpServletMapping</artifactId>
+    <artifactId>servletHttpServletMapping</artifactId>
     <packaging>war</packaging>
-    <name>A HTTP servlet mapping example</name>
+    <name>A Servlet API HTTP servlet mapping example</name>
     <dependencies>
         <dependency>
             <groupId>javax</groupId>

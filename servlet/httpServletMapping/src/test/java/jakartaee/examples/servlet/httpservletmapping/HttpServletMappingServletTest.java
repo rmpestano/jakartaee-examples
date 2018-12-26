@@ -29,7 +29,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- * The JUnit tests for the HTTP servlet mapping example.
+ * The JUnit tests for the Servlet API HTTP servlet mapping example.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */

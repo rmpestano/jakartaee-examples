@@ -29,7 +29,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- * The JUnit tests for the @WebServlet example.
+ * The JUnit tests for the Servlet API asynchronous Servlet example.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */

@@ -9,9 +9,9 @@
         <groupId>jakartaee.examples.servlet</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>pushBuilder</artifactId>
+    <artifactId>servletPushBuilder</artifactId>
     <packaging>war</packaging>
-    <name>A PushBuilder example</name>
+    <name>A Servlet API PushBuilder example</name>
     <dependencies>
         <dependency>
             <groupId>javax</groupId>

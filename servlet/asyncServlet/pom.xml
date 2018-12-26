@@ -9,9 +9,9 @@
         <groupId>jakartaee.examples.servlet</groupId>
         <version>8-SNAPSHOT</version>
     </parent>
-    <artifactId>asyncServlet</artifactId>
+    <artifactId>servletAsyncServlet</artifactId>
     <packaging>war</packaging>
-    <name>An asynchronous servlet example</name>
+    <name>A Servlet API asynchronous Servlet example</name>
     <dependencies>
         <dependency>
             <groupId>javax</groupId>

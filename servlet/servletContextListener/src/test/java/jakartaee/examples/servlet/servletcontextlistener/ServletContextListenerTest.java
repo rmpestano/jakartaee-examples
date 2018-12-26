@@ -30,7 +30,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- * The JUnit tests for the ServletContextListener example.
+ * The JUnit tests for the Servlet API ServletContextListener example.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */

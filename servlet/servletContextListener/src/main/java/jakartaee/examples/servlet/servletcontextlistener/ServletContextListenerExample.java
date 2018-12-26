@@ -18,7 +18,7 @@ import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
 /**
- * The ServletContextListener for the ServletContextListener example.
+ * The ServletContextListener for the Servlet API ServletContextListener example.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */

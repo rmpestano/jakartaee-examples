@@ -29,7 +29,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- * The JUnit tests for the @WebServlet example.
+ * The JUnit tests for the Servlet API @WebServlet example.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */
@@ -75,13 +75,13 @@ public class WebServletServletTest {
     }
 
     /**
-     * Test the @WebServlet annotation.
+     * Test the @WebServlet.
      * 
      * @throws Exception when a serious error occurs.
      */
     @RunAsClient
     @Test
-    public void testWebServletAnnotation() throws Exception {
+    public void testWebServlet() throws Exception {
         TextPage page = webClient.getPage(baseUrl);
         String content = page.getContent();
         assertTrue(content.contains("And we called an @WebServlet servlet"));

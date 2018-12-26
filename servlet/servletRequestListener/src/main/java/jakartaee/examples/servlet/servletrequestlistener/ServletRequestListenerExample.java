@@ -18,7 +18,7 @@ import javax.servlet.ServletRequestListener;
 import javax.servlet.annotation.WebListener;
 
 /**
- * The ServletRequestListener for the ServletRequestListener example.
+ * The ServletRequestListener for the Servlet API ServletRequestListener example.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */

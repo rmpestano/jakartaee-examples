@@ -10,7 +10,7 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package jakartaee.examples.servlet.pushBuilder;
+package jakartaee.examples.servlet.pushbuilder;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.PushBuilder;
 
 /**
- * A PushBuilder servlet.
+ * A Servlet API PushBuilder servlet.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */

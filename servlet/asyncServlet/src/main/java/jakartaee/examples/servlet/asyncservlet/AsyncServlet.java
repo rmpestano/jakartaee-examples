@@ -29,7 +29,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * The Servlet for the asynchronous servlet example.
+ * The Servlet for the Servlet API asynchronous Servlet example.
  *
  * @author Manfred Riem (mriem@manorrock.com)
  */

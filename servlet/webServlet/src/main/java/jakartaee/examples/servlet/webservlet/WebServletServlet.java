@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * The Servlet for the @WebServlet example.
+ * The Servlet for the Servlet API @WebServlet example.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */

@@ -11,7 +11,7 @@
     </parent>
     <artifactId>servletRequestListener</artifactId>
     <packaging>war</packaging>
-    <name>A ServletRequestListener example</name>
+    <name>A Servlet API ServletRequestListener example</name>
     <dependencies>
         <dependency>
             <groupId>javax</groupId>

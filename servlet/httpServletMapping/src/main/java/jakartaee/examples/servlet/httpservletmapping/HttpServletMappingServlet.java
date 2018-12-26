@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * The servlet for the HTTP servlet mapping example.
+ * The servlet for the Servlet API HTTP servlet mapping example.
  * 
  * @author Manfred Riem (mriem@manorrock.com)
  */
