@@ -1,3 +1,3 @@
-# A BASIC authentication example
+# An EE Management Simple example
 
-This example demonstrates how to use EESecurity with BASIC authentication.
+This example demonstrates how to get started with EE Management.
