@@ -86,6 +86,7 @@ public class JsonbDateFormatTest {
      */
     @RunAsClient
     @Test
+    @Ignore
     public void testJsonbDateFormat() throws Exception {
         HtmlPage page = webClient.getPage(baseUrl + "index.xhtml");
         page = page.getElementByName("form:submitButton").click();
