@@ -1,5 +1,10 @@
 # JSF Examples
 
+The examples below illustrate the use of JSF as specified at
+https://github.com/eclipse-ee4j/mojarra. In the larger ecosystem  of 
+JakartaEE JSF is a model, view and controller API that delivers you with an
+abstraction layer on top of the Servlet API.
+
 1. [A f:actionListener example](actionListener/README.md)
 2. [A f:ajax example](ajax/README.md)
 3. [An injected ApplicationMap example](applicationMap/README.md)
