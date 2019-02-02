@@ -122,13 +122,13 @@
         <dependency>
             <groupId>org.arquillian.container</groupId>
             <artifactId>arquillian-container-chameleon</artifactId>
-            <version>1.0.0.CR3</version>
+            <version>1.0.0.CR5</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.arquillian.container</groupId>
             <artifactId>arquillian-container-chameleon-runner</artifactId>
-            <version>1.0.0.CR3</version>
+            <version>1.0.0.CR5</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -194,7 +194,19 @@
             <properties>
                 <arquillian.container>wildfly:13.0.0.Final:managed</arquillian.container>
             </properties>
-        </profile>    
+        </profile>   
+        <profile>
+            <id>wildfly15</id>
+            <properties>
+                <arquillian.container>wildfly:15.0.1.Final:managed</arquillian.container>
+            </properties>
+        </profile>   
+         <profile>
+            <id>tomee8</id>
+            <properties>
+                <arquillian.container>tomee:8.0.0-M2:managed</arquillian.container>
+            </properties>
+        </profile>   
     </profiles>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
