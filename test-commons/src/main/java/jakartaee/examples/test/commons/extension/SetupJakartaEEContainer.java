@@ -20,16 +20,16 @@ import org.jboss.arquillian.core.spi.EventContext;
  * @author rmpestano
  */
 class SetupJakartaEEContainer {
-	
-	private String chameleonTarget;
-	
-	public void beforeSetup(@Observes(precedence=100) EventContext<SetupContainer> setup) throws Exception {
+
+    private String chameleonTarget;
+
+    public void beforeSetup(@Observes(precedence = 100) EventContext<SetupContainer> setup) throws Exception {
         SetupContainer event = setup.getEvent();
-        chameleonTarget = event.getContainer().getContainerConfiguration().getContainerProperty("chameleonTarget"); 
+        chameleonTarget = event.getContainer().getContainerConfiguration().getContainerProperty("chameleonTarget");
         setup.proceed();
     }
 
-    public void afterSetup(@Observes(precedence=-1) EventContext<SetupContainer> setup) throws Exception {
+    public void afterSetup(@Observes(precedence = -1) EventContext<SetupContainer> setup) throws Exception {
         SetupContainer event = setup.getEvent();
         if (isWildfly(event)) {
             addWildflyCustomConfigFile(event);
@@ -41,25 +41,29 @@ class SetupJakartaEEContainer {
         return chameleonTarget.startsWith("wildfly");
     }
 
-	private void addWildflyCustomConfigFile(SetupContainer event) {
-		String[] nameVersionAndMode = chameleonTarget.split(":"); 
-		String serverVersion = nameVersionAndMode[1];
-		//server distribution will be at: target/server/wildfly-dist_version/wildfly-version
-		String serverDistFolder = "target/server/wildfly-dist_"+serverVersion+"/wildfly-"+serverVersion;
-		File configFolder = new File(serverDistFolder + "/standalone/configuration");
-		if(!configFolder.exists()) {
-			throw new RuntimeException(String.format("Could not find server %s configuration folder at %s", chameleonTarget, configFolder.getAbsolutePath()));
-		}
-		addCustomConfig(configFolder);
+    private void addWildflyCustomConfigFile(SetupContainer event) {
+        String[] nameVersionAndMode = chameleonTarget.split(":");
+        String serverVersion = nameVersionAndMode[1];
+        // server distribution will be at:
+        // target/server/wildfly-dist_version/wildfly-version
+        String serverDistFolder = "target/server/wildfly-dist_" + serverVersion + "/wildfly-" + serverVersion;
+        File configFolder = new File(serverDistFolder + "/standalone/configuration");
+        if (!configFolder.exists()) {
+            throw new RuntimeException(String.format("Could not find server %s configuration folder at %s",
+                chameleonTarget, configFolder.getAbsolutePath()));
+        }
+        addCustomConfig(configFolder);
     }
 
-	private void addCustomConfig(File configFolder) {
-		try {
-			File defaultConfigFile = new File(configFolder.getPath() + "/standalone.xml");
-			Files.copy(Paths.get(SetupJakartaEEContainer.class.getResource("/custom-standalone.xml").getPath()), defaultConfigFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
-		} catch (IOException e) {
-			throw new RuntimeException("Could not copy custom config file into folder "+configFolder.getAbsolutePath(), e);
-		}
-	}
+    private void addCustomConfig(File configFolder) {
+        try {
+            File defaultConfigFile = new File(configFolder.getPath() + "/standalone.xml");
+            Files.copy(Paths.get(SetupJakartaEEContainer.class.getResource("/custom-standalone.xml").getPath()),
+                defaultConfigFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+        } catch (IOException e) {
+            throw new RuntimeException(
+                "Could not copy custom config file into folder " + configFolder.getAbsolutePath(), e);
+        }
+    }
 
 }
